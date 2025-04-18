@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DevOps on Rohimoz28</title>
+    <link>https://rohimoz28.github.io/categories/devops/</link>
+    <description>Recent content in DevOps on Rohimoz28</description>
+    <generator>Hugo -- 0.126.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Dec 2024 12:26:32 +0700</lastBuildDate>
+    <atom:link href="https://rohimoz28.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Membuat Notifikasi Menggunakan Webhook Discord</title>
+      <link>https://rohimoz28.github.io/blog/membuat-notifikasi-menggunakan-webhook-discord/</link>
+      <pubDate>Sat, 14 Dec 2024 12:26:32 +0700</pubDate>
+      <guid>https://rohimoz28.github.io/blog/membuat-notifikasi-menggunakan-webhook-discord/</guid>
+      <description>Cara Membuat Notifikasi Event Realtime Menggunakan Webhook Discord</description>
+    </item>
+  </channel>
+</rss>

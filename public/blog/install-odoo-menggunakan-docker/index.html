@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Install Odoo 17 Menggunakan Docker | Rohimoz28</title>
+<meta name="keywords" content="odoo, docker">
+<meta name="description" content="Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker. Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian. Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.
+Untuk tuorial kali ini, akan menggunakan source code dari repository github saya. Silahkan di fork atau di clone di lokal kalian.
+Struktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder.">
+<meta name="author" content="">
+<link rel="canonical" href="https://rohimoz28.github.io/blog/install-odoo-menggunakan-docker/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://rohimoz28.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rohimoz28.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rohimoz28.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rohimoz28.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rohimoz28.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://rohimoz28.github.io/blog/install-odoo-menggunakan-docker/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Install Odoo 17 Menggunakan Docker" />
+<meta property="og:description" content="Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker. Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian. Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.
+Untuk tuorial kali ini, akan menggunakan source code dari repository github saya. Silahkan di fork atau di clone di lokal kalian.
+Struktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rohimoz28.github.io/blog/install-odoo-menggunakan-docker/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-09-29T18:41:16+07:00" />
+<meta property="article:modified_time" content="2024-09-29T18:41:16+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install Odoo 17 Menggunakan Docker"/>
+<meta name="twitter:description" content="Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker. Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian. Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.
+Untuk tuorial kali ini, akan menggunakan source code dari repository github saya. Silahkan di fork atau di clone di lokal kalian.
+Struktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://rohimoz28.github.io/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Install Odoo 17 Menggunakan Docker",
+      "item": "https://rohimoz28.github.io/blog/install-odoo-menggunakan-docker/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Install Odoo 17 Menggunakan Docker",
+  "name": "Install Odoo 17 Menggunakan Docker",
+  "description": "Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker. Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian. Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.\nUntuk tuorial kali ini, akan menggunakan source code dari repository github saya. Silahkan di fork atau di clone di lokal kalian.\nStruktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder.",
+  "keywords": [
+    "odoo", "docker"
+  ],
+  "articleBody": "Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker. Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian. Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.\nUntuk tuorial kali ini, akan menggunakan source code dari repository github saya. Silahkan di fork atau di clone di lokal kalian.\nStruktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder. conf customize. Struktur folder kalian akan tampak seperti ini: Folder Conf Folder ini berisikan file - file konfigurasi dari :\nDocker (docker-compose.yaml, Dockerfile, dev.yaml, prod.yaml) Database (pg-data) File Konfigurasi Project (odoo-demo) Secret File Konfigurasi (myenvfile.env) Folder Customize Folder ini berisikan modul kustomisasi odoo. Biasanya, saya membedakan antara modul kustomisasi yang di install dari thirdparty dengan modul murni hasil kustomisasi kita sendiri.\naddons-thirdparty berisikan modul yang berasal dari thirdparty (OCA, Cybrosys, dll) addons-customize berisikan modul kustomisasi kita sendiri. Selanjutnya, saya akan membahas Folder Conf lebih detail.\nJika sudah, akan ada beberapa langkah yang kamu harus ikuti sampai Odoo dan Postgresql berhasil terinstall dan siap kamu gunakan.\nBuat Struktur Direktori Build Dockerfile untuk Odoo Buat Docker Compose Docker Compose Extension Dockerfile File ini adalah yang akan kita build menjadi docker images yang nantinya digunakan oleh project Odoo kita. Yang perlu diperhatikan adalah:\nOdoo Version yang ingin digunakan Package linux yang ingin di install Package dependensi python yang ingin digunakan Pada repo di atas, saya menggunakan konfigurasi Dockerfile seperti dibawah ini:\nFROM odoo:17.0 USER root RUN apt-get -y update \u0026\u0026 apt-get install -y git xmlsec1 vim zip RUN pip3 install --upgrade --no-cache-dir pip RUN pip3 install --no-cache-dir astor RUN pip3 install --no-cache-dir cachetools RUN pip3 install --no-cache-dir openupgradelib RUN pip3 install --no-cache-dir wheel RUN pip3 install --no-cache-dir pandas RUN pip3 install --no-cache-dir mdb-parser RUN pip3 install --no-cache-dir holidays RUN pip3 install --no-cache-dir bigjson RUN pip3 install --no-cache-dir pymysql RUN pip3 install --no-cache-dir formats RUN pip3 install --no-cache-dir py3o.formats RUN pip3 install --no-cache-dir py3o.template # Password security RUN pip3 install --no-cache-dir zxcvbn Untuk build image dari dockerfile, gunakan command berikut: docker build -t custom-odoo:17.0 .\nDocker Compose Untuk konfigurasi docker-compose.yaml saya menggunakan seperti ini:\nversion: \"3.8\" services: odoo-demo: image: custom-odoo:17.0 container_name: odoo-demo env_file: myenvfile.env depends_on: - postgres-demo volumes: - odoo1-data-demo:/var/lib/odoo - ./config/odoo/demo:/etc/odoo - ../../customize/odoo-demo/addons-customize:/mnt/addons-customize - ../../customize/odoo-demo/addons-thirdparty:/mnt/addons-thirdparty networks: - demo_odoo_network postgres-demo: image: postgres:15 container_name: postgres-demo env_file: myenvfile.env volumes: - ./pg-data:/var/lib/pgsql/data/pgdata - ./config/postgresql/postgresql.conf:/etc/postgresql/postgresql.conf:ro networks: - demo_odoo_network # nginx-default: # image: nginx:1.24.0 # container_name: nginx-default # volumes: # - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf # depends_on: # - odoo17-default # networks: # - default_odoo_network volumes: odoo1-data-demo: networks: demo_odoo_network: name: demo_odoo_network driver: bridge Docker Compose Extension Docker Compose Extension digunakan supaya docker-compose.yaml lebih efision dan memudahkan dalam hal maintenis. Biasanya, saya menggunakan dua ekstensi. dev.yaml dan prod.yaml.\nFile extension dev.yaml version: \"3.8\" services: odoo-demo: restart: unless-stopped ports: - \"8069:8069\" postgres-demo: ports: - \"5433:5432\" restart: unless-stopped # nginx-demo: # restart: no # ports: # - \"81:80\" File extension prod.yaml version: \"3.8\" services: odoo-demo: restart: unless-stopped ports: - \"8069:8069\" postgres-demo: ports: - \"5434:5432\" restart: unless-stopped # nginx-demo: # restart: always # ports: # - \"81:80\" Database Untuk database, saya menggunakan fitur docker bind mounts dimana ini memungkinkan untuk menyimpan file konfigurasi postgresql dan database nya disimpan di lokal folder, bukan di dalam volume.\nFolder pg-data berisikan file konfigurasi dan database dari postgresql.\nFile Environment Untuk environment konfigurasi, saya biasa memisahkan konfigurasi environment setiap aplikasi docker ke dalam sebuah file bernama myenvfile.env.\nSaya menyimpan user dan password postgresql ke dalam myenvfile.env seperti dibawah ini:\n# postgresql env variables\rPOSTGRES_DB=postgres\rPOSTGRES_USER=odoodemo\rPOSTGRES_PASSWORD=odoodemo123\rPGDATA=/var/lib/pgsql/data/pgdata\r# odoo env variables\r#HOST=postgres-demo\r#USER=odoodemo\r#PASSWORD=odoodemo123 Alasan saya memisahkannya dari docker-compose.yaml adalah untuk modularisasi dan juga kebutuhan setiap user akan environment aplikasi biasanya berbeda-beda. Hal ini akan membuat docker-compose.yaml menjadi lebih general dalam penggunaannya.\nFile Konfigurasi Project Biasanya juga, saya membuat sebuah folder yang berisikan file konfigurasi dari sebuah project secara khusus. Misalkan, saya membuat folder odoo-demo yang berisi file konfigurasi odoo secara spesifik hanya untuk project tertentu.\nDi dalam odoo-demo biasanya saya membuat folder:\nodoo : berisi file odoo.conf postgresql : berisi file postgresql.conf dan lainnya sesuai dengan kebutuh dari project tersebut Selanjutnya, kita akan coba menjalankan Odoo menggunakan Docker.\nCoba Jalankan Docker Compose Masuk ke dalam folder docker compose\ncd /conf/odoo-demo\nJalankan docker compose\ndocker compose -f docker-compose.yaml -f dev.yaml up -d\nCek status docker compose\nJika tidak ada masalah, jalan kan command di bawah ini untuk cek apakah servis Odoo dan Postgresql sudah berjalan. docker ps -l Cara Cek Log Semua Service Docker Compose\nBiasanya kita akan memerlukan pengecekan log saat servis docker sedang berjalan. Untuk cek log dari semua servis yang berada di docker compose sebanyak 200 message log terakhir, jalankan command:\ndocker compose logs -f --tail 200\nCek log per container\ndocker container logs -f --tail 200 Testing Sekarang saatnya untuk menjalankan service docker di browser. Jika tidak ada masalah, seharusnya kita bisa mengakses aplikasi odoo pada alamat http://localhost:8069/. Command Docker lainnya Restart docker compose\ndocker compose -f docker-compose -f dev.yaml restart\nStop docker compose\ndocker compose -f docker-compose -f dev.yaml stop\nStart docker compose\ndocker compose -f docker-compose -f dev.yaml start\nRestart docker container\ndocker container restart\nPenutup Selamat, sekarang kalian sudah bisa meng-install Odoo dan Postgresql menggunakan docker. Dengan konfigurasi dasar ini, selanjutnya kalian bisa install multi instance odoo yang kelak akan di bahas di artikel lainnya.\nTerimakasih.\n",
+  "wordCount" : "877",
+  "inLanguage": "en",
+  "datePublished": "2024-09-29T18:41:16+07:00",
+  "dateModified": "2024-09-29T18:41:16+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rohimoz28.github.io/blog/install-odoo-menggunakan-docker/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rohimoz28",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rohimoz28.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rohimoz28.github.io/" accesskey="h" title="Rohimoz28 (Alt + H)">Rohimoz28</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://rohimoz28.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rohimoz28.github.io/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rohimoz28.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://rohimoz28.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://rohimoz28.github.io/blog/">Blogs</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Install Odoo 17 Menggunakan Docker
+    </h1>
+    <div class="post-meta"><span title='2024-09-29 18:41:16 +0700 +07'>September 29, 2024</span>&nbsp;·&nbsp;5 min
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#struktur-folder" aria-label="Struktur Folder">Struktur Folder</a><ul>
+                        
+                <li>
+                    <a href="#folder-conf" aria-label="Folder Conf">Folder Conf</a></li>
+                <li>
+                    <a href="#folder-customize" aria-label="Folder Customize">Folder Customize</a></li></ul>
+                </li>
+                <li>
+                    <a href="#dockerfile" aria-label="Dockerfile">Dockerfile</a></li>
+                <li>
+                    <a href="#docker-compose" aria-label="Docker Compose">Docker Compose</a></li>
+                <li>
+                    <a href="#docker-compose-extension" aria-label="Docker Compose Extension">Docker Compose Extension</a><ul>
+                        
+                <li>
+                    <a href="#file-extension-devyaml" aria-label="File extension dev.yaml">File extension dev.yaml</a></li>
+                <li>
+                    <a href="#file-extension-prodyaml" aria-label="File extension prod.yaml">File extension prod.yaml</a></li></ul>
+                </li>
+                <li>
+                    <a href="#database" aria-label="Database">Database</a></li>
+                <li>
+                    <a href="#file-environment" aria-label="File Environment">File Environment</a></li>
+                <li>
+                    <a href="#file-konfigurasi-project" aria-label="File Konfigurasi Project">File Konfigurasi Project</a></li>
+                <li>
+                    <a href="#coba-jalankan-docker-compose" aria-label="Coba Jalankan Docker Compose">Coba Jalankan Docker Compose</a><ul>
+                        
+                <li>
+                    <a href="#testing" aria-label="Testing">Testing</a></li></ul>
+                </li>
+                <li>
+                    <a href="#command-docker-lainnya" aria-label="Command Docker lainnya">Command Docker lainnya</a></li>
+                <li>
+                    <a href="#penutup" aria-label="Penutup">Penutup</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker.
+Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian.
+Jika belum, silahkan ikuti <a href="%5Bhttps://%5D(https://docs.docker.com/engine/install/)">Tutorial Install Docker</a> dari laman resminya.</p>
+<p>Untuk tuorial kali ini, akan menggunakan source code dari <a href="https://github.com/rohimoz28/odoo-docker">repository</a>
+github saya. Silahkan di fork atau di clone di lokal kalian.</p>
+<h2 id="struktur-folder">Struktur Folder<a hidden class="anchor" aria-hidden="true" href="#struktur-folder">#</a></h2>
+<p>Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder. <code>conf</code> <code>customize</code>.
+Struktur folder kalian akan tampak seperti ini:
+<img loading="lazy" src="images/struktur-direktori.jpg" alt="struktur-direktori"  />
+</p>
+<h3 id="folder-conf">Folder Conf<a hidden class="anchor" aria-hidden="true" href="#folder-conf">#</a></h3>
+<p>Folder ini berisikan file - file konfigurasi dari :</p>
+<ul>
+<li>Docker (<code>docker-compose.yaml</code>, <code>Dockerfile</code>, <code>dev.yaml</code>, <code>prod.yaml</code>)</li>
+<li>Database (<code>pg-data</code>)</li>
+<li>File Konfigurasi Project (<code>odoo-demo</code>)</li>
+<li>Secret File Konfigurasi (<code>myenvfile.env</code>)</li>
+</ul>
+<h3 id="folder-customize">Folder Customize<a hidden class="anchor" aria-hidden="true" href="#folder-customize">#</a></h3>
+<p>Folder ini berisikan modul kustomisasi odoo. Biasanya, saya membedakan antara modul kustomisasi yang di install dari
+thirdparty dengan modul murni hasil kustomisasi kita sendiri.</p>
+<ul>
+<li><code>addons-thirdparty</code> berisikan modul yang berasal dari thirdparty (<code>OCA</code>, <code>Cybrosys</code>, dll)</li>
+<li><code>addons-customize</code> berisikan modul kustomisasi kita sendiri.</li>
+</ul>
+<p>Selanjutnya, saya akan membahas Folder Conf lebih detail.</p>
+<hr>
+<p>Jika sudah, akan ada beberapa langkah yang kamu harus ikuti sampai Odoo dan Postgresql berhasil terinstall dan
+siap kamu gunakan.</p>
+<ol>
+<li>Buat Struktur Direktori</li>
+<li>Build Dockerfile untuk Odoo</li>
+<li>Buat Docker Compose</li>
+<li>Docker Compose Extension</li>
+</ol>
+<h2 id="dockerfile">Dockerfile<a hidden class="anchor" aria-hidden="true" href="#dockerfile">#</a></h2>
+<p>File ini adalah yang akan kita build menjadi docker images yang nantinya digunakan oleh project Odoo kita.
+Yang perlu diperhatikan adalah:</p>
+<ul>
+<li>Odoo Version yang ingin digunakan</li>
+<li>Package linux yang ingin di install</li>
+<li>Package dependensi python yang ingin digunakan</li>
+</ul>
+<p>Pada repo di atas, saya menggunakan konfigurasi Dockerfile seperti dibawah ini:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Docker" data-lang="Docker"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> odoo:17.0</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span><span style="color:#e6db74"> root</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apt-get -y update <span style="color:#f92672">&amp;&amp;</span> apt-get install -y git xmlsec1 vim zip<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --upgrade --no-cache-dir pip<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir astor<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir cachetools<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir openupgradelib<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir wheel<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir pandas<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir mdb-parser<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir holidays<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir bigjson<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir pymysql<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir formats<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir py3o.formats<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir py3o.template<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Password security</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir zxcvbn<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>Untuk build image dari dockerfile, gunakan command berikut: <br>
+<code>docker build -t custom-odoo:17.0 .</code></p>
+<h2 id="docker-compose">Docker Compose<a hidden class="anchor" aria-hidden="true" href="#docker-compose">#</a></h2>
+<p>Untuk konfigurasi <code>docker-compose.yaml</code> saya menggunakan seperti ini:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Docker" data-lang="Docker"><span style="display:flex;"><span>version: <span style="color:#e6db74">&#34;3.8&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>services:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  odoo-demo:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    image: custom-odoo:17.0<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    container_name: odoo-demo<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    env_file: myenvfile.env<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    depends_on:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - postgres-demo<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    volumes:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - odoo1-data-demo:/var/lib/odoo<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - ./config/odoo/demo:/etc/odoo<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - ../../customize/odoo-demo/addons-customize:/mnt/addons-customize<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - ../../customize/odoo-demo/addons-thirdparty:/mnt/addons-thirdparty<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    networks:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - demo_odoo_network<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  postgres-demo:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    image: postgres:15<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    container_name: postgres-demo<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    env_file: myenvfile.env<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    volumes:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - ./pg-data:/var/lib/pgsql/data/pgdata<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - ./config/postgresql/postgresql.conf:/etc/postgresql/postgresql.conf:ro<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    networks:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - demo_odoo_network<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e"># nginx-default:</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#   image: nginx:1.24.0</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#   container_name: nginx-default</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#   volumes:</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#     - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#   depends_on:</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#     - odoo17-default</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#   networks:</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#     - default_odoo_network</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>volumes:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  odoo1-data-demo:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>networks:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  demo_odoo_network:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    name: demo_odoo_network<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    driver: bridge<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h2 id="docker-compose-extension">Docker Compose Extension<a hidden class="anchor" aria-hidden="true" href="#docker-compose-extension">#</a></h2>
+<p>Docker Compose Extension digunakan supaya <code>docker-compose.yaml</code> lebih efision dan memudahkan dalam hal maintenis.
+Biasanya, saya menggunakan dua ekstensi. <code>dev.yaml</code> dan <code>prod.yaml</code>.</p>
+<h3 id="file-extension-devyaml">File extension dev.yaml<a hidden class="anchor" aria-hidden="true" href="#file-extension-devyaml">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Docker" data-lang="Docker"><span style="display:flex;"><span>version: <span style="color:#e6db74">&#34;3.8&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>services:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  odoo-demo:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    restart: unless-stopped<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    ports:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - <span style="color:#e6db74">&#34;8069:8069&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  postgres-demo:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    ports:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - <span style="color:#e6db74">&#34;5433:5432&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    restart: unless-stopped<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e"># nginx-demo:</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#   restart: no</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#   ports:</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#     - &#34;81:80&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="file-extension-prodyaml">File extension prod.yaml<a hidden class="anchor" aria-hidden="true" href="#file-extension-prodyaml">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Docker" data-lang="Docker"><span style="display:flex;"><span>version: <span style="color:#e6db74">&#34;3.8&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>services:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  odoo-demo:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    restart: unless-stopped<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    ports:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - <span style="color:#e6db74">&#34;8069:8069&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  postgres-demo:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    ports:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>      - <span style="color:#e6db74">&#34;5434:5432&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    restart: unless-stopped<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e"># nginx-demo:</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#   restart: always</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#   ports:</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">#     - &#34;81:80&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h2 id="database">Database<a hidden class="anchor" aria-hidden="true" href="#database">#</a></h2>
+<p>Untuk database, saya menggunakan fitur docker bind mounts dimana ini memungkinkan untuk menyimpan file konfigurasi
+postgresql dan database nya disimpan di lokal folder, bukan di dalam volume.</p>
+<p>Folder <code>pg-data</code> berisikan file konfigurasi dan database dari postgresql.</p>
+<h2 id="file-environment">File Environment<a hidden class="anchor" aria-hidden="true" href="#file-environment">#</a></h2>
+<p>Untuk environment konfigurasi, saya biasa memisahkan konfigurasi environment setiap aplikasi docker ke dalam sebuah file bernama
+<code>myenvfile.env</code>.</p>
+<p>Saya menyimpan user dan password postgresql ke dalam <code>myenvfile.env</code> seperti dibawah ini:</p>
+<pre tabindex="0"><code class="language-dotenv" data-lang="dotenv"># postgresql env variables
+POSTGRES_DB=postgres
+POSTGRES_USER=odoodemo
+POSTGRES_PASSWORD=odoodemo123
+PGDATA=/var/lib/pgsql/data/pgdata
+
+# odoo env variables
+#HOST=postgres-demo
+#USER=odoodemo
+#PASSWORD=odoodemo123
+</code></pre><p>Alasan saya memisahkannya dari <code>docker-compose.yaml</code> adalah untuk modularisasi dan juga kebutuhan setiap user akan
+environment aplikasi biasanya berbeda-beda. Hal ini akan membuat <code>docker-compose.yaml</code> menjadi lebih general dalam
+penggunaannya.</p>
+<h2 id="file-konfigurasi-project">File Konfigurasi Project<a hidden class="anchor" aria-hidden="true" href="#file-konfigurasi-project">#</a></h2>
+<p>Biasanya juga, saya membuat sebuah folder yang berisikan file konfigurasi dari sebuah project secara khusus. Misalkan,
+saya membuat folder <code>odoo-demo</code> yang berisi file konfigurasi odoo secara spesifik hanya untuk project tertentu.</p>
+<p>Di dalam <code>odoo-demo</code> biasanya saya membuat folder:</p>
+<ul>
+<li>odoo : berisi file <code>odoo.conf</code></li>
+<li>postgresql : berisi file <code>postgresql.conf</code></li>
+<li>dan lainnya sesuai dengan kebutuh dari project tersebut</li>
+</ul>
+<p>Selanjutnya, kita akan coba menjalankan Odoo menggunakan Docker.</p>
+<h2 id="coba-jalankan-docker-compose">Coba Jalankan Docker Compose<a hidden class="anchor" aria-hidden="true" href="#coba-jalankan-docker-compose">#</a></h2>
+<p><strong>Masuk ke dalam folder docker compose</strong><br>
+<code>cd /conf/odoo-demo</code></p>
+<p><strong>Jalankan docker compose</strong><br>
+<code>docker compose -f docker-compose.yaml -f dev.yaml up -d</code></p>
+<p><strong>Cek status docker compose</strong><br>
+Jika tidak ada masalah, jalan kan command di bawah ini untuk cek apakah servis Odoo dan Postgresql sudah berjalan.
+<code>docker ps -l</code>
+<img loading="lazy" src="images/docker-ps.jpg" alt="docker-ps"  />
+</p>
+<p><strong>Cara Cek Log Semua Service Docker Compose</strong><br>
+Biasanya kita akan memerlukan pengecekan log saat servis docker sedang berjalan.
+Untuk cek log dari semua servis yang berada di docker compose sebanyak 200 message log terakhir,
+jalankan command:<br>
+<code>docker compose logs -f --tail 200</code></p>
+<p><strong>Cek log per container</strong><br>
+<code>docker container logs -f --tail 200 &lt;idContainer&gt;</code></p>
+<h3 id="testing">Testing<a hidden class="anchor" aria-hidden="true" href="#testing">#</a></h3>
+<p>Sekarang saatnya untuk menjalankan service docker di browser. Jika tidak ada masalah, seharusnya kita bisa mengakses aplikasi odoo pada alamat <code>http://localhost:8069/</code>.
+<img loading="lazy" src="images/localhost.jpg" alt="odoo-browser-first-install"  />
+</p>
+<hr>
+<h2 id="command-docker-lainnya">Command Docker lainnya<a hidden class="anchor" aria-hidden="true" href="#command-docker-lainnya">#</a></h2>
+<p><strong>Restart docker compose</strong><br>
+<code>docker compose -f docker-compose -f dev.yaml restart</code></p>
+<p><strong>Stop docker compose</strong><br>
+<code>docker compose -f docker-compose -f dev.yaml stop</code></p>
+<p><strong>Start docker compose</strong><br>
+<code>docker compose -f docker-compose -f dev.yaml start</code></p>
+<p><strong>Restart docker container</strong><br>
+<code>docker container &lt;idContainer&gt; restart</code></p>
+<hr>
+<h2 id="penutup">Penutup<a hidden class="anchor" aria-hidden="true" href="#penutup">#</a></h2>
+<p>Selamat, sekarang kalian sudah bisa meng-install Odoo dan Postgresql menggunakan docker.
+Dengan konfigurasi dasar ini, selanjutnya kalian bisa install multi instance odoo yang kelak akan di bahas di artikel
+lainnya.</p>
+<p>Terimakasih.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rohimoz28.github.io/tags/odoo/">Odoo</a></li>
+      <li><a href="https://rohimoz28.github.io/tags/docker/">Docker</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://rohimoz28.github.io/blog/install-multi-odoo-instance-menggunakan-docker/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Docker Multi Instance Odoo</span>
+  </a>
+  <a class="next" href="https://rohimoz28.github.io/blog/relokasi-docker/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Relokasi Docker</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Install Odoo 17 Menggunakan Docker on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2frohimoz28.github.io%2fblog%2finstall-odoo-menggunakan-docker%2f&amp;title=Install%20Odoo%2017%20Menggunakan%20Docker&amp;summary=Install%20Odoo%2017%20Menggunakan%20Docker&amp;source=https%3a%2f%2frohimoz28.github.io%2fblog%2finstall-odoo-menggunakan-docker%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Install Odoo 17 Menggunakan Docker on whatsapp"
+            href="https://api.whatsapp.com/send?text=Install%20Odoo%2017%20Menggunakan%20Docker%20-%20https%3a%2f%2frohimoz28.github.io%2fblog%2finstall-odoo-menggunakan-docker%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Install Odoo 17 Menggunakan Docker on telegram"
+            href="https://telegram.me/share/url?text=Install%20Odoo%2017%20Menggunakan%20Docker&amp;url=https%3a%2f%2frohimoz28.github.io%2fblog%2finstall-odoo-menggunakan-docker%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://rohimoz28.github.io/">Rohimoz28</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
