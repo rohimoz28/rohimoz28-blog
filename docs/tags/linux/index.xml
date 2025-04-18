@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Linux on Rohimoz28</title>
-    <link>https://rohimoz28.github.io/tags/linux/</link>
+    <link>http://localhost:1313/tags/linux/</link>
     <description>Recent content in Linux on Rohimoz28</description>
-    <generator>Hugo -- 0.126.2</generator>
+    <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Mar 2025 17:50:54 +0700</lastBuildDate>
-    <atom:link href="https://rohimoz28.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shell Script Untuk Backup Otomatis</title>
-      <link>https://rohimoz28.github.io/blog/shell-script-untuk-backup-otomatis/</link>
+      <link>http://localhost:1313/blog/shell-script-untuk-backup-otomatis/</link>
       <pubDate>Fri, 28 Mar 2025 17:50:54 +0700</pubDate>
-      <guid>https://rohimoz28.github.io/blog/shell-script-untuk-backup-otomatis/</guid>
+      <guid>http://localhost:1313/blog/shell-script-untuk-backup-otomatis/</guid>
       <description>Backup aplikasi adalah sesuatu yang wajib dilakukan. Jika rutin dilakukan, ada baiknya kita buat menjadi otomatis.</description>
     </item>
     <item>
       <title>Cara Koneksi SSH Tanpa Password</title>
-      <link>https://rohimoz28.github.io/blog/cara-koneksi-ssh-tanpa-password/</link>
+      <link>http://localhost:1313/blog/cara-koneksi-ssh-tanpa-password/</link>
       <pubDate>Fri, 07 Mar 2025 21:13:39 +0700</pubDate>
-      <guid>https://rohimoz28.github.io/blog/cara-koneksi-ssh-tanpa-password/</guid>
+      <guid>http://localhost:1313/blog/cara-koneksi-ssh-tanpa-password/</guid>
       <description>Ada saatnya kita perlu login SSH ke server tanpa harus input password.</description>
     </item>
   </channel>
