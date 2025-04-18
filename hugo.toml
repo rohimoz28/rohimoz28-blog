@@ -1,4 +1,4 @@
-baseURL = 'https://rohimoz28.github.io'
+baseURL = 'https://rohimoz28.netlify.app'
 languageCode = 'en-us'
 title = 'Rohimoz28'
 theme = 'PaperMod'
