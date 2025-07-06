@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Dev Ops on Rohimoz28</title>
-    <link>http://localhost:1313/categories/dev-ops/</link>
+    <link>https://rohimoz28.netlify.app/categories/dev-ops/</link>
     <description>Recent content in Dev Ops on Rohimoz28</description>
     <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Mar 2025 17:50:54 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/dev-ops/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://rohimoz28.netlify.app/categories/dev-ops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shell Script Untuk Backup Otomatis</title>
-      <link>http://localhost:1313/blog/shell-script-untuk-backup-otomatis/</link>
+      <link>https://rohimoz28.netlify.app/blog/shell-script-untuk-backup-otomatis/</link>
       <pubDate>Fri, 28 Mar 2025 17:50:54 +0700</pubDate>
-      <guid>http://localhost:1313/blog/shell-script-untuk-backup-otomatis/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/shell-script-untuk-backup-otomatis/</guid>
       <description>Backup aplikasi adalah sesuatu yang wajib dilakukan. Jika rutin dilakukan, ada baiknya kita buat menjadi otomatis.</description>
     </item>
     <item>
       <title>Cara Koneksi SSH Tanpa Password</title>
-      <link>http://localhost:1313/blog/cara-koneksi-ssh-tanpa-password/</link>
+      <link>https://rohimoz28.netlify.app/blog/cara-koneksi-ssh-tanpa-password/</link>
       <pubDate>Fri, 07 Mar 2025 21:13:39 +0700</pubDate>
-      <guid>http://localhost:1313/blog/cara-koneksi-ssh-tanpa-password/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/cara-koneksi-ssh-tanpa-password/</guid>
       <description>Ada saatnya kita perlu login SSH ke server tanpa harus input password.</description>
     </item>
     <item>
       <title>Konfigurasi Dasar CI/CD Gitlab</title>
-      <link>http://localhost:1313/blog/konfigurasi-dasar-cicd-gitlab/</link>
+      <link>https://rohimoz28.netlify.app/blog/konfigurasi-dasar-cicd-gitlab/</link>
       <pubDate>Thu, 20 Feb 2025 15:32:40 +0700</pubDate>
-      <guid>http://localhost:1313/blog/konfigurasi-dasar-cicd-gitlab/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/konfigurasi-dasar-cicd-gitlab/</guid>
       <description>Berikut ini adalah konfigurasi dasar file gitlab-ci.yml yang digunakan untuk CI/CD pada Gitlab.</description>
     </item>
     <item>
       <title>Install Gitlab Runner</title>
-      <link>http://localhost:1313/blog/install-gitlab-runner/</link>
+      <link>https://rohimoz28.netlify.app/blog/install-gitlab-runner/</link>
       <pubDate>Mon, 10 Feb 2025 08:38:29 +0700</pubDate>
-      <guid>http://localhost:1313/blog/install-gitlab-runner/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/install-gitlab-runner/</guid>
       <description>Untuk menggunakan CI/CD pada gitlab, ada beberapa aplikasi untuk mendukung hal tersebut. Tapi, GitLab Runner adalah yang paling kompatibel dengan GitLab Community.</description>
     </item>
     <item>
       <title>Install Gitlab Community Menggunakan Docker</title>
-      <link>http://localhost:1313/blog/install-gitlab-community/</link>
+      <link>https://rohimoz28.netlify.app/blog/install-gitlab-community/</link>
       <pubDate>Thu, 30 Jan 2025 11:49:28 +0700</pubDate>
-      <guid>http://localhost:1313/blog/install-gitlab-community/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/install-gitlab-community/</guid>
       <description>Dengan beberapa alasan, adakalanya kita ingin memiliki Gitlab yang terinstall pada server yang kita kelola sendiri.</description>
     </item>
     <item>
       <title>Backup dan Restore Gitlab Dengan Docker Pada Server Berbeda</title>
-      <link>http://localhost:1313/blog/backup-restore-gitlab/</link>
+      <link>https://rohimoz28.netlify.app/blog/backup-restore-gitlab/</link>
       <pubDate>Tue, 24 Dec 2024 11:52:59 +0700</pubDate>
-      <guid>http://localhost:1313/blog/backup-restore-gitlab/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/backup-restore-gitlab/</guid>
       <description>Implementasi Backup dan Restore GitLab menggunakan Docker Pada Server Berbeda</description>
     </item>
     <item>
       <title>Docker Multi Instance Odoo</title>
-      <link>http://localhost:1313/blog/install-multi-odoo-instance-menggunakan-docker/</link>
+      <link>https://rohimoz28.netlify.app/blog/install-multi-odoo-instance-menggunakan-docker/</link>
       <pubDate>Sun, 29 Sep 2024 19:03:00 +0700</pubDate>
-      <guid>http://localhost:1313/blog/install-multi-odoo-instance-menggunakan-docker/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/install-multi-odoo-instance-menggunakan-docker/</guid>
       <description>tutorial dan cara install banyak odoo instance dengan docker</description>
     </item>
     <item>
       <title>Relokasi Docker</title>
-      <link>http://localhost:1313/blog/relokasi-docker/</link>
+      <link>https://rohimoz28.netlify.app/blog/relokasi-docker/</link>
       <pubDate>Thu, 29 Aug 2024 18:41:16 +0700</pubDate>
-      <guid>http://localhost:1313/blog/relokasi-docker/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/relokasi-docker/</guid>
       <description>Latar Belakang Masalah Secara default, direktori docker terletak pada /var/lib/docker. Ada kalanya, ketika docker image , volume dan container sudah terlalu besar sehingga memakan storage. Kita ingin memindahkan letak direktori docker ini agar tidak memakan storage root kita yang pada akhirnya akan menghentikan service docker itu sendiri.
 Solusi Maka dari itu, kita perlu merelokasi direktori default docker ini ke partisi lain yang memiliki kapasitas lebih besar daripada partisi root.
 Persiapan stop semua docker yang sedang berjalan</description>
