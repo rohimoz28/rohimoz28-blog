@@ -2,7 +2,7 @@
 title = 'Git Stash - Part 1'
 date = '2025-07-06T18:32:24+07:00'
 draft = false
-description = ''
+description = 'Git stash untuk pemula.'
 categories= ['Web Dev', 'Git']
 tags = ['git']
 +++
@@ -42,6 +42,8 @@ Kita juga bisa membuat branch baru dari stash menggunakan command `git stash bra
 Waktu Penggunaan: ketika sedang ditengah pekerjaan yang belum selesai lalu ingin pindah ke pekerjaan atau branch lain.
 
 Tips : Jangan terlalu banyak membuat stash! Tidak mengerjakan fitur baru lebih baik daripada mengerjakan banyak fitur yang tidak selesai ;)
+
+Jika ingin membaca artikel mengenai git stash lanjutan, silahkan cek di [Git Stash - Part 2]({{< ref "blog/git-stash-2" >}}).
 
 Sekian. Terimakasih!
 

@@ -2,75 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blogs on Rohimoz28</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>https://rohimoz28.netlify.app/blog/</link>
     <description>Recent content in Blogs on Rohimoz28</description>
     <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Jul 2025 18:32:24 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Jul 2025 20:04:51 +0700</lastBuildDate>
+    <atom:link href="https://rohimoz28.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Stash - Part 2</title>
+      <link>https://rohimoz28.netlify.app/blog/git-stash-2/</link>
+      <pubDate>Sun, 06 Jul 2025 20:04:51 +0700</pubDate>
+      <guid>https://rohimoz28.netlify.app/blog/git-stash-2/</guid>
+      <description>Sekarang waktunya menggunakan stash seperti seorang pro.</description>
+    </item>
     <item>
       <title>Git Stash - Part 1</title>
-      <link>http://localhost:1313/blog/git-stash-1/</link>
+      <link>https://rohimoz28.netlify.app/blog/git-stash-1/</link>
       <pubDate>Sun, 06 Jul 2025 18:32:24 +0700</pubDate>
-      <guid>http://localhost:1313/blog/git-stash-1/</guid>
-      <description>Latar Belakang Ketika seorang developer sedang mengerjakan sebuah fitur lalu ditengah-tengah pekerjaan yang belum selesai, developer terpaksa atau dipaksa untuk meninggalkan pekerjaan yang belum selesai di branch tersebut, untuk pindah ke branch lain.
-Biasanya dikarenakan ada pekerjaan lain yang lebih urgent untuk diselesaikan yang menuntut developer untuk checkout atau pindah dari branch yang sedang di develop.
-Pada waktu tersebut, biasanya developer malas atau enggan untuk membuat commit dari pekerjaan yang belum selesai.</description>
+      <guid>https://rohimoz28.netlify.app/blog/git-stash-1/</guid>
+      <description>Git stash untuk pemula.</description>
     </item>
     <item>
       <title>Shell Script Untuk Backup Otomatis</title>
-      <link>http://localhost:1313/blog/shell-script-untuk-backup-otomatis/</link>
+      <link>https://rohimoz28.netlify.app/blog/shell-script-untuk-backup-otomatis/</link>
       <pubDate>Fri, 28 Mar 2025 17:50:54 +0700</pubDate>
-      <guid>http://localhost:1313/blog/shell-script-untuk-backup-otomatis/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/shell-script-untuk-backup-otomatis/</guid>
       <description>Backup aplikasi adalah sesuatu yang wajib dilakukan. Jika rutin dilakukan, ada baiknya kita buat menjadi otomatis.</description>
     </item>
     <item>
       <title>Cara Koneksi SSH Tanpa Password</title>
-      <link>http://localhost:1313/blog/cara-koneksi-ssh-tanpa-password/</link>
+      <link>https://rohimoz28.netlify.app/blog/cara-koneksi-ssh-tanpa-password/</link>
       <pubDate>Fri, 07 Mar 2025 21:13:39 +0700</pubDate>
-      <guid>http://localhost:1313/blog/cara-koneksi-ssh-tanpa-password/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/cara-koneksi-ssh-tanpa-password/</guid>
       <description>Ada saatnya kita perlu login SSH ke server tanpa harus input password.</description>
     </item>
     <item>
       <title>Konfigurasi Dasar CI/CD Gitlab</title>
-      <link>http://localhost:1313/blog/konfigurasi-dasar-cicd-gitlab/</link>
+      <link>https://rohimoz28.netlify.app/blog/konfigurasi-dasar-cicd-gitlab/</link>
       <pubDate>Thu, 20 Feb 2025 15:32:40 +0700</pubDate>
-      <guid>http://localhost:1313/blog/konfigurasi-dasar-cicd-gitlab/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/konfigurasi-dasar-cicd-gitlab/</guid>
       <description>Berikut ini adalah konfigurasi dasar file gitlab-ci.yml yang digunakan untuk CI/CD pada Gitlab.</description>
     </item>
     <item>
       <title>Install Gitlab Runner</title>
-      <link>http://localhost:1313/blog/install-gitlab-runner/</link>
+      <link>https://rohimoz28.netlify.app/blog/install-gitlab-runner/</link>
       <pubDate>Mon, 10 Feb 2025 08:38:29 +0700</pubDate>
-      <guid>http://localhost:1313/blog/install-gitlab-runner/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/install-gitlab-runner/</guid>
       <description>Untuk menggunakan CI/CD pada gitlab, ada beberapa aplikasi untuk mendukung hal tersebut. Tapi, GitLab Runner adalah yang paling kompatibel dengan GitLab Community.</description>
     </item>
     <item>
       <title>Install Gitlab Community Menggunakan Docker</title>
-      <link>http://localhost:1313/blog/install-gitlab-community/</link>
+      <link>https://rohimoz28.netlify.app/blog/install-gitlab-community/</link>
       <pubDate>Thu, 30 Jan 2025 11:49:28 +0700</pubDate>
-      <guid>http://localhost:1313/blog/install-gitlab-community/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/install-gitlab-community/</guid>
       <description>Dengan beberapa alasan, adakalanya kita ingin memiliki Gitlab yang terinstall pada server yang kita kelola sendiri.</description>
     </item>
     <item>
       <title>Cara Backup Odoo Dan Postgresql</title>
-      <link>http://localhost:1313/blog/cara-manual-backup-odoo/</link>
+      <link>https://rohimoz28.netlify.app/blog/cara-manual-backup-odoo/</link>
       <pubDate>Sat, 25 Jan 2025 19:55:30 +0700</pubDate>
-      <guid>http://localhost:1313/blog/cara-manual-backup-odoo/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/cara-manual-backup-odoo/</guid>
       <description>Jika Backup Odoo Melalui Front End Sudah Tidak Bisa Di Lakukan. Mungkin Backup Manual Postgresql dan Odoo Filestore Bisa Menjadi Opsi.</description>
     </item>
     <item>
       <title>Backup dan Restore Gitlab Dengan Docker Pada Server Berbeda</title>
-      <link>http://localhost:1313/blog/backup-restore-gitlab/</link>
+      <link>https://rohimoz28.netlify.app/blog/backup-restore-gitlab/</link>
       <pubDate>Tue, 24 Dec 2024 11:52:59 +0700</pubDate>
-      <guid>http://localhost:1313/blog/backup-restore-gitlab/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/backup-restore-gitlab/</guid>
       <description>Implementasi Backup dan Restore GitLab menggunakan Docker Pada Server Berbeda</description>
     </item>
     <item>
       <title>Cara Debug Odoo Di Docker Menggunakan Pdb</title>
-      <link>http://localhost:1313/blog/cara-debug-odoo-di-docker-menggunakan-pdb/</link>
+      <link>https://rohimoz28.netlify.app/blog/cara-debug-odoo-di-docker-menggunakan-pdb/</link>
       <pubDate>Mon, 16 Dec 2024 13:27:39 +0700</pubDate>
-      <guid>http://localhost:1313/blog/cara-debug-odoo-di-docker-menggunakan-pdb/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/cara-debug-odoo-di-docker-menggunakan-pdb/</guid>
       <description>Latar Belakang Masalah Untuk melakukan debugging di odoo, ada beberapa cara. Yang paling direkomendasikan adalah menggunakan python package pdb. Sayangnya, ketika develop Odoo menggunakan docker. Perlu ada konfigurasi khusus agar kita bisa menggunakan package tersebut.
 Dalam praktik kali ini saya mengasumsikan teman-teman sudah menginstall odoo menggunakan docker. Kali ini, kita akan menggunakan VSCode sebagai text editor.
 Ada dua cara untuk melakukan debugging saat develop menggunakan docker.
@@ -78,16 +83,16 @@ Ada dua cara untuk melakukan debugging saat develop menggunakan docker.
     </item>
     <item>
       <title>Membuat Notifikasi Menggunakan Webhook Discord</title>
-      <link>http://localhost:1313/blog/membuat-notifikasi-menggunakan-webhook-discord/</link>
+      <link>https://rohimoz28.netlify.app/blog/membuat-notifikasi-menggunakan-webhook-discord/</link>
       <pubDate>Sat, 14 Dec 2024 12:26:32 +0700</pubDate>
-      <guid>http://localhost:1313/blog/membuat-notifikasi-menggunakan-webhook-discord/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/membuat-notifikasi-menggunakan-webhook-discord/</guid>
       <description>Cara Membuat Notifikasi Event Realtime Menggunakan Webhook Discord</description>
     </item>
     <item>
       <title>Cara Menyimpan Query SQL Pada Modul Odoo</title>
-      <link>http://localhost:1313/blog/cara-menyimpan-query-sql-pada-module-odoo/</link>
+      <link>https://rohimoz28.netlify.app/blog/cara-menyimpan-query-sql-pada-module-odoo/</link>
       <pubDate>Tue, 26 Nov 2024 18:41:16 +0700</pubDate>
-      <guid>http://localhost:1313/blog/cara-menyimpan-query-sql-pada-module-odoo/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/cara-menyimpan-query-sql-pada-module-odoo/</guid>
       <description>Masalahnya, praktik meletakkan query procedure PostgreSQL langsung di database lalu memanggilnya dengan function execute di kode python merupakan hal yang buruk ketika procedure tersebut dikerjakan oleh beberapa orang.
 Sayangnya, ketika banyak orang mengerjakan query procedure langsung di database, bisa mengakibatkan inkonsistensi kode.
 Untuk itu, diperlukan suatu cara untuk mensinkronkan query sql yang di kerjakan di dalam team.
@@ -95,34 +100,34 @@ Buat Folder db Pertama, kita buat folder baru didalam modul kustom kita dengan n
     </item>
     <item>
       <title>Docker Multi Instance Odoo</title>
-      <link>http://localhost:1313/blog/install-multi-odoo-instance-menggunakan-docker/</link>
+      <link>https://rohimoz28.netlify.app/blog/install-multi-odoo-instance-menggunakan-docker/</link>
       <pubDate>Sun, 29 Sep 2024 19:03:00 +0700</pubDate>
-      <guid>http://localhost:1313/blog/install-multi-odoo-instance-menggunakan-docker/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/install-multi-odoo-instance-menggunakan-docker/</guid>
       <description>tutorial dan cara install banyak odoo instance dengan docker</description>
     </item>
     <item>
       <title>Install Odoo 17 Menggunakan Docker</title>
-      <link>http://localhost:1313/blog/install-odoo-menggunakan-docker/</link>
+      <link>https://rohimoz28.netlify.app/blog/install-odoo-menggunakan-docker/</link>
       <pubDate>Sun, 29 Sep 2024 18:41:16 +0700</pubDate>
-      <guid>http://localhost:1313/blog/install-odoo-menggunakan-docker/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/install-odoo-menggunakan-docker/</guid>
       <description>Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker. Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian. Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.
 Untuk tuorial kali ini, akan menggunakan source code dari repository github saya. Silahkan di fork atau di clone di lokal kalian.
 Struktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder.</description>
     </item>
     <item>
       <title>Relokasi Docker</title>
-      <link>http://localhost:1313/blog/relokasi-docker/</link>
+      <link>https://rohimoz28.netlify.app/blog/relokasi-docker/</link>
       <pubDate>Thu, 29 Aug 2024 18:41:16 +0700</pubDate>
-      <guid>http://localhost:1313/blog/relokasi-docker/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/relokasi-docker/</guid>
       <description>Latar Belakang Masalah Secara default, direktori docker terletak pada /var/lib/docker. Ada kalanya, ketika docker image , volume dan container sudah terlalu besar sehingga memakan storage. Kita ingin memindahkan letak direktori docker ini agar tidak memakan storage root kita yang pada akhirnya akan menghentikan service docker itu sendiri.
 Solusi Maka dari itu, kita perlu merelokasi direktori default docker ini ke partisi lain yang memiliki kapasitas lebih besar daripada partisi root.
 Persiapan stop semua docker yang sedang berjalan</description>
     </item>
     <item>
       <title>Override ir.model.access.csv</title>
-      <link>http://localhost:1313/blog/override-ir-model-access/</link>
+      <link>https://rohimoz28.netlify.app/blog/override-ir-model-access/</link>
       <pubDate>Mon, 29 Jul 2024 18:41:16 +0700</pubDate>
-      <guid>http://localhost:1313/blog/override-ir-model-access/</guid>
+      <guid>https://rohimoz28.netlify.app/blog/override-ir-model-access/</guid>
       <description>Latar Belakang Masalah Biasanya, ketika kita meng-install module odoo dari third party, sudah otomatis ada pengaturan ir.model.access.csv bawaan modul tersebut. Ada kalanya, kita ingin menyesuaikan hak akses tersebut dengan kebutuhan di modul kustomisasi kita.
 Solusi Maka dari itu, kita perlu melakukan override hak akses yg ada di ir.model.access.csv.
 Override ir.model.access.csv Dibawah ini adalah contoh hak akses di ir.model.access.csv yang ingin kita override.
