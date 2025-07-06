@@ -9,11 +9,13 @@
     <lastBuildDate>Sun, 06 Jul 2025 18:32:24 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Git Stash</title>
-      <link>http://localhost:1313/blog/git-stash/</link>
+      <title>Git Stash - Part 1</title>
+      <link>http://localhost:1313/blog/git-stash-1/</link>
       <pubDate>Sun, 06 Jul 2025 18:32:24 +0700</pubDate>
-      <guid>http://localhost:1313/blog/git-stash/</guid>
-      <description></description>
+      <guid>http://localhost:1313/blog/git-stash-1/</guid>
+      <description>Latar Belakang Ketika seorang developer sedang mengerjakan sebuah fitur lalu ditengah-tengah pekerjaan yang belum selesai, developer terpaksa atau dipaksa untuk meninggalkan pekerjaan yang belum selesai di branch tersebut, untuk pindah ke branch lain.
+Biasanya dikarenakan ada pekerjaan lain yang lebih urgent untuk diselesaikan yang menuntut developer untuk checkout atau pindah dari branch yang sedang di develop.
+Pada waktu tersebut, biasanya developer malas atau enggan untuk membuat commit dari pekerjaan yang belum selesai.</description>
     </item>
   </channel>
 </rss>

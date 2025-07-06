@@ -1,5 +1,5 @@
 +++
-title = 'Git Stash'
+title = 'Git Stash - Part 1'
 date = '2025-07-06T18:32:24+07:00'
 draft = false
 description = ''
@@ -7,12 +7,12 @@ categories= ['Web Dev', 'Git']
 tags = ['git']
 +++
 ## Latar Belakang
-Ketika seorang developer sedang mengerjakan sebuah fitur lalu ditengah-tengah pekerjaan yang belum selesai tersebut, 
-developer terpaksa atau dipaksa untuk meninggalkan pengerjaan fitur yang belum selesai untuk pindah ke branch lain.
+Ketika seorang developer sedang mengerjakan sebuah fitur lalu ditengah-tengah pekerjaan yang belum selesai, 
+developer terpaksa atau dipaksa untuk meninggalkan pekerjaan yang belum selesai di branch tersebut, untuk pindah ke branch lain.
 
-Biasanya dikarenakan ada pekerjaan lain yang urgent untuk diselesaikan yang menuntut developer untuk checkout atau pindah dari branch yang sedang di develop.
+Biasanya dikarenakan ada pekerjaan lain yang lebih urgent untuk diselesaikan yang menuntut developer untuk checkout atau pindah dari branch yang sedang di develop.
 
-Pada waktu tersebut, biasanya developer malas atau enggan untuk membuat commit dari pekerjaan yang belum selesai.
+Pada waktu tersebut, biasanya developer malas atau enggan untuk membuat commit dari pekerjaan yang belum selesai. Namun ingin tetap memisahkan pekerjaan yang belum selesai dengan pekerjaan yang baru.
 
 ## Git Stash
 Definisi dari official Git.
@@ -41,7 +41,11 @@ Kita juga bisa membuat branch baru dari stash menggunakan command `git stash bra
 ## Kesimpulan
 Waktu Penggunaan: ketika sedang ditengah pekerjaan yang belum selesai lalu ingin pindah ke pekerjaan atau branch lain.
 
-Pro Tips : selalu gunakan comment/commit ketika membuat stash supaya tidak lupa.
+Tips : Jangan terlalu banyak membuat stash! Tidak mengerjakan fitur baru lebih baik daripada mengerjakan banyak fitur yang tidak selesai ;)
 
 Sekian. Terimakasih!
 
+---
+
+## References: 
+- [Official Git - Git Stash](https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning)
