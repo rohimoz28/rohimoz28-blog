@@ -36,6 +36,22 @@ Tujuan utama adalah jaminan data dan memastikan RPO nol (tidak ada kehilangan da
 
 Memilih tipe streaming data pada proses replikasi database akan sangat bergantung dengan kebutuhan bisnis yang dihadapi.
 
+**A. Kapan Menggunakan ASINKRON (Async)**
+
+Ini adalah pilihan default dan paling umum.
+
+**Prioritas**: Performa dan kecepatan transaksi.
+
+**Kasus Penggunaan**: Sebagian besar aplikasi Web, E-commerce, Odoo, atau sistem yang dapat mentolerir hilangnya beberapa detik data (misalnya, beberapa transaksi terakhir) jika terjadi kegagalan katastrofik Primary.
+
+**B. Kapan Menggunakan SINKRON (Sync)**
+
+Gunakan ini hanya ketika integritas data adalah yang terpenting.
+
+**Prioritas**: RPO = 0 (Tidak ada kehilangan data).
+
+**Kasus Penggunaan**: Sistem keuangan, trading, atau database sensitif di mana kehilangan satu transaksi pun tidak dapat diterima.
+
 ## Dummy Project
 Untuk dummy project bisa dicek di repo [Github](https://github.com/rohimoz28/postgresql-async-replication).
 Pada project tersebut, membuat 1 aplikasi API menggunakan Flask dan 2 database (Master & Replica) yang semuanya
