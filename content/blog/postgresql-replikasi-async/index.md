@@ -27,10 +27,12 @@ setelah Primary menerima konfirmasi dari server Standby bahwa mereka telah mener
 
 Tujuan utama adalah jaminan data dan memastikan RPO nol (tidak ada kehilangan data) dalam skenario failover.
 
-|      | Async                                                                              | Sync                                                                                  |
-|------|------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Pros | - Kinerja Tinggi<br />- Paling Umum (Diterapkan pada banyak case)                  | - Integritas Data Maksimal<br />- Konsistensi Tinggi                                  |
-| Cons | - Potensi Kehilangan Data<br />- Tidak menjamin RPO (Recovery Point Objective) nol | - Kinerja Lebih Rendah<br />- IRL, Membutuhkan setidaknya satu Standby yang berfungsi |
+|      | Pros                                        | Cons                                                 |
+|------|---------------------------------------------|------------------------------------------------------|
+| Async| - Kinerja Tinggi                            | - Potensi Kehilangan Data                            |
+|      | - Paling Umum (Diterapkan pada banyak case) | - Tidak menjamin RPO (Recovery Point Objective) nol                                                   |
+| Sync | - Integritas Data Maksimal                  | - Kinerja Lebih Rendah                               |  
+|      | - Konsistensi Tinggi                        | - Membutuhkan setidaknya satu Standby yang berfungsi |
 
 Memilih tipe streaming data pada proses replikasi database akan sangat bergantung dengan kebutuhan bisnis yang dihadapi.
 
