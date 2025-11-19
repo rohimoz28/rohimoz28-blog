@@ -1,5 +1,5 @@
 +++
-title = 'Postgresql Replikasi'
+title = 'PostgreSQL Replication'
 date = '2025-11-14T14:09:18+07:00'
 draft = false
 description = 'Dummy project untuk replikasi PostgreSQL'
@@ -27,10 +27,10 @@ setelah Primary menerima konfirmasi dari server Standby bahwa mereka telah mener
 
 Tujuan utama adalah jaminan data dan memastikan RPO nol (tidak ada kehilangan data) dalam skenario failover.
 
-| Streaming Data | Async                                                                                | Sync                                                                                    |
-|----------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| Pros           | - Kinerja Tinggi<br/> - Paling Umum (Diterapkan pada banyak case)                    | - Integritas Data Maksimal<br/> - Konsistensi Tinggi                                    |
-| Cons           | - Potensi Kehilangan Data <br/> - Tidak menjamin RPO (Recovery Point Objective) nol  | - Kinerja Lebih Rendah <br/> - IRL, Membutuhkan setidaknya satu Standby yang berfungsi  |
+| Streaming  | Async                                                                                | Sync                                                                                    |
+|------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Pros       | - Kinerja Tinggi<br/> - Paling Umum (Diterapkan pada banyak case)                    | - Integritas Data Maksimal<br/> - Konsistensi Tinggi                                    |
+| Cons       | - Potensi Kehilangan Data <br/> - Tidak menjamin RPO (Recovery Point Objective) nol  | - Kinerja Lebih Rendah <br/> - IRL, Membutuhkan setidaknya satu Standby yang berfungsi  |
 
 Memilih tipe streaming data pada proses replikasi database akan sangat bergantung dengan kebutuhan bisnis yang dihadapi.
 
