@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Git on Rohimoz28</title>
-    <link>https://rohimoz28.netlify.app/tags/git/</link>
+    <link>http://localhost:1313/tags/git/</link>
     <description>Recent content in Git on Rohimoz28</description>
     <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Jul 2025 20:04:51 +0700</lastBuildDate>
-    <atom:link href="https://rohimoz28.netlify.app/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git Stash - Part 2</title>
-      <link>https://rohimoz28.netlify.app/blog/git-stash-2/</link>
+      <link>http://localhost:1313/blog/git-stash-2/</link>
       <pubDate>Sun, 06 Jul 2025 20:04:51 +0700</pubDate>
-      <guid>https://rohimoz28.netlify.app/blog/git-stash-2/</guid>
+      <guid>http://localhost:1313/blog/git-stash-2/</guid>
       <description>Sekarang waktunya menggunakan stash seperti seorang pro.</description>
     </item>
     <item>
       <title>Git Stash - Part 1</title>
-      <link>https://rohimoz28.netlify.app/blog/git-stash-1/</link>
+      <link>http://localhost:1313/blog/git-stash-1/</link>
       <pubDate>Sun, 06 Jul 2025 18:32:24 +0700</pubDate>
-      <guid>https://rohimoz28.netlify.app/blog/git-stash-1/</guid>
+      <guid>http://localhost:1313/blog/git-stash-1/</guid>
       <description>Git stash untuk pemula.</description>
     </item>
     <item>
       <title>Install Gitlab Runner</title>
-      <link>https://rohimoz28.netlify.app/blog/install-gitlab-runner/</link>
+      <link>http://localhost:1313/blog/install-gitlab-runner/</link>
       <pubDate>Mon, 10 Feb 2025 08:38:29 +0700</pubDate>
-      <guid>https://rohimoz28.netlify.app/blog/install-gitlab-runner/</guid>
+      <guid>http://localhost:1313/blog/install-gitlab-runner/</guid>
       <description>Untuk menggunakan CI/CD pada gitlab, ada beberapa aplikasi untuk mendukung hal tersebut. Tapi, GitLab Runner adalah yang paling kompatibel dengan GitLab Community.</description>
     </item>
     <item>
       <title>Install Gitlab Community Menggunakan Docker</title>
-      <link>https://rohimoz28.netlify.app/blog/install-gitlab-community/</link>
+      <link>http://localhost:1313/blog/install-gitlab-community/</link>
       <pubDate>Thu, 30 Jan 2025 11:49:28 +0700</pubDate>
-      <guid>https://rohimoz28.netlify.app/blog/install-gitlab-community/</guid>
+      <guid>http://localhost:1313/blog/install-gitlab-community/</guid>
       <description>Dengan beberapa alasan, adakalanya kita ingin memiliki Gitlab yang terinstall pada server yang kita kelola sendiri.</description>
     </item>
     <item>
       <title>Backup dan Restore Gitlab Dengan Docker Pada Server Berbeda</title>
-      <link>https://rohimoz28.netlify.app/blog/backup-restore-gitlab/</link>
+      <link>http://localhost:1313/blog/backup-restore-gitlab/</link>
       <pubDate>Tue, 24 Dec 2024 11:52:59 +0700</pubDate>
-      <guid>https://rohimoz28.netlify.app/blog/backup-restore-gitlab/</guid>
+      <guid>http://localhost:1313/blog/backup-restore-gitlab/</guid>
       <description>Implementasi Backup dan Restore GitLab menggunakan Docker Pada Server Berbeda</description>
     </item>
   </channel>

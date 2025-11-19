@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Postgresql on Rohimoz28</title>
+    <link>http://localhost:1313/tags/postgresql/</link>
+    <description>Recent content in Postgresql on Rohimoz28</description>
+    <generator>Hugo -- 0.126.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Nov 2025 14:09:18 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Postgresql Replikasi Async</title>
+      <link>http://localhost:1313/blog/postgresql-replikasi-async/</link>
+      <pubDate>Fri, 14 Nov 2025 14:09:18 +0700</pubDate>
+      <guid>http://localhost:1313/blog/postgresql-replikasi-async/</guid>
+      <description>Dummy project untuk replikasi PostgreSQL</description>
+    </item>
+  </channel>
+</rss>

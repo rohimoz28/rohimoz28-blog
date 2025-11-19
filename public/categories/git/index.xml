@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Git on Rohimoz28</title>
-    <link>https://rohimoz28.netlify.app/categories/git/</link>
+    <link>http://localhost:1313/categories/git/</link>
     <description>Recent content in Git on Rohimoz28</description>
     <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Jul 2025 20:04:51 +0700</lastBuildDate>
-    <atom:link href="https://rohimoz28.netlify.app/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git Stash - Part 2</title>
-      <link>https://rohimoz28.netlify.app/blog/git-stash-2/</link>
+      <link>http://localhost:1313/blog/git-stash-2/</link>
       <pubDate>Sun, 06 Jul 2025 20:04:51 +0700</pubDate>
-      <guid>https://rohimoz28.netlify.app/blog/git-stash-2/</guid>
+      <guid>http://localhost:1313/blog/git-stash-2/</guid>
       <description>Sekarang waktunya menggunakan stash seperti seorang pro.</description>
     </item>
     <item>
       <title>Git Stash - Part 1</title>
-      <link>https://rohimoz28.netlify.app/blog/git-stash-1/</link>
+      <link>http://localhost:1313/blog/git-stash-1/</link>
       <pubDate>Sun, 06 Jul 2025 18:32:24 +0700</pubDate>
-      <guid>https://rohimoz28.netlify.app/blog/git-stash-1/</guid>
+      <guid>http://localhost:1313/blog/git-stash-1/</guid>
       <description>Git stash untuk pemula.</description>
     </item>
   </channel>
