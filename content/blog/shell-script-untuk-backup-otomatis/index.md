@@ -3,8 +3,8 @@ title = 'Shell Script Untuk Backup Otomatis'
 date = '2025-03-28T17:50:54+07:00'
 draft = false
 description = 'Backup aplikasi adalah sesuatu yang wajib dilakukan. Jika rutin dilakukan, ada baiknya kita buat menjadi otomatis.'
-categories= ['Dev Ops']
-tags = ['docker', 'linux', 'odoo']
+categories= ['Database']
+tags = ['postgresql', 'odoo']
 +++
 
 ## Latar Belakang Masalah

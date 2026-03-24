@@ -153,6 +153,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Postgresql Async Replication Concept
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Replikasi database adalah salah satu pilar utama dalam membangun sistem yang memiliki ketersediaan tinggi (High Availability). Artikel ini akan membahas secara konseptual bagaimana Streaming Replication dengan mode Asynchronous bekerja, terutama dalam lingkungan yang menggunakan Docker.
+1. Arsitektur Replikasi Asynchronous Dalam model asynchronous, kita memprioritaskan performa tulis (write performance) pada server utama agar aplikasi tetap responsif.
+Primary (Master): Server utama untuk operasi tulis dan baca. Ketika terjadi transaksi, server akan langsung melakukan commit sukses tanpa menunggu konfirmasi dari server replika. Standby (Replica): Server cadangan yang bertindak sebagai read-only. Server ini terus-menerus menarik (pull) data perubahan dari Primary, namun dengan potensi jeda waktu (lag) yang sangat kecil. ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-24 13:43:16 +0700 WIB'>March 24, 2026</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to Postgresql Async Replication Concept" href="http://localhost:1313/blog/postgresql-async-replication-concept/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Strategi Backup Restore Postgresql Docker
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
@@ -214,21 +228,6 @@ Menyimpan Stash Dengan Pesan git stash push -m &#34;pesan_commit_untuk_stash&#34
   </div>
   <footer class="entry-footer"><span title='2025-07-06 20:04:51 +0700 WIB'>July 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Git Stash - Part 2" href="http://localhost:1313/blog/git-stash-2/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Git Stash - Part 1
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Latar Belakang Ketika seorang developer sedang mengerjakan sebuah fitur lalu ditengah-tengah pekerjaan yang belum selesai, developer terpaksa atau dipaksa untuk meninggalkan pekerjaan yang belum selesai di branch tersebut, untuk pindah ke branch lain.
-Biasanya dikarenakan ada pekerjaan lain yang lebih urgent untuk diselesaikan yang menuntut developer untuk checkout atau pindah dari branch yang sedang di develop.
-Pada waktu tersebut, biasanya developer malas atau enggan untuk membuat commit dari pekerjaan yang belum selesai. Namun ingin tetap memisahkan pekerjaan yang belum selesai dengan pekerjaan yang baru.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-07-06 18:32:24 +0700 WIB'>July 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Git Stash - Part 1" href="http://localhost:1313/blog/git-stash-1/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

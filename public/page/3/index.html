@@ -122,6 +122,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Gitlab Community Menggunakan Docker
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Latar Belakang Masalah Sebelumnya, saya menggunakan Gitlab.com (Enterprise). Namun belum menggunakan versi berbayarnya. Jadi, ada banyak limitasi di sana-sini. Seperti limitasi jumlah member per project. Untuk itu, saya mencari solusi, dikarenakan perusahaan memiliki beberapa server, Gitlab Community Edition menjadi pilihan.
+Requirement 2.5 GB storage 8 vCPU 16 GB RAM Untuk lebih lengkapnya, silahkan kunjungi official page.
+Environment Untuk menginstall Gitlab Community Edition. Saya akan menggunakan docker. Untuk image docker tersebut, tersedia disini.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-30 11:49:28 +0700 WIB'>January 30, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Install Gitlab Community Menggunakan Docker" href="http://localhost:1313/blog/install-gitlab-community/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Cara Backup Odoo Dan Postgresql
     </h2>
   </header>
@@ -178,24 +193,6 @@ Keuntungan Menggunakan Webhook Real-Time: Webhook memungkinkan komunikasi yang c
   </div>
   <footer class="entry-footer"><span title='2024-12-14 12:26:32 +0700 WIB'>December 14, 2024</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to Membuat Notifikasi Menggunakan Webhook Discord" href="http://localhost:1313/blog/membuat-notifikasi-menggunakan-webhook-discord/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Odoo Scheduled Actions
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> &lt;record id=&#34;ir_cron_populate_leave_allocation&#34; model=&#34;ir.cron&#34;&gt; &lt;field name=&#34;name&#34;&gt;HR Leave Allocation: Populate Leave Allocation&lt;/field&gt; &lt;field name=&#34;model_id&#34; ref=&#34;model_sb_leave_allocation&#34;/&gt; &lt;field name=&#34;state&#34;&gt;code&lt;/field&gt; &lt;field name=&#34;code&#34;&gt;model._cron_populate_leave_alloc()&lt;/field&gt; &lt;field name=&#34;user_id&#34; ref=&#34;base.user_root&#34;/&gt; &lt;field name=&#34;interval_number&#34;&gt;1&lt;/field&gt; &lt;field name=&#34;interval_type&#34;&gt;days&lt;/field&gt; &lt;field name=&#34;numbercall&#34;&gt;-1&lt;/field&gt; &lt;field name=&#34;nextcall&#34; eval=&#34;(DateTime.utcnow() &#43; timedelta(days=1)).replace(hour=18, minute=0, second=0, microsecond=0).strftime(&#39;%Y-%m-%d %H:%M:%S&#39;)&#34;/&gt; &lt;field eval=&#34;False&#34; name=&#34;doall&#34;/&gt; &lt;/record&gt; import logging def _cron_populate_leave_alloc(self): self.env.cr.execute(&#34;CALL procedure_leave_alloc()&#34;) self.env.cr.commit() _logger = logging.getLogger(__name__) _logger.info(&#34;Cron For Populate Leave Allocation is Running Successfully&#34;) </p>
-  </div>
-  <footer class="entry-footer"><span title='2024-12-02 22:03:36 +0700 WIB'>December 2, 2024</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to Odoo Scheduled Actions" href="http://localhost:1313/blog/odoo-scheduled-actions/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
