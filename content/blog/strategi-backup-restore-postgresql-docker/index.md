@@ -2,7 +2,9 @@
 title = 'Strategi Backup Restore Postgresql Docker'
 description = ''
 date = '2026-03-24T13:30:51+07:00'
-draft = true
+draft = false
+categories= ['Database']
+tags = ['database', 'postgresql', 'docker']
 +++
 
 Pernahkah Anda membayangkan terbangun di pagi hari dan mendapati database utama Anda *corrupt* atau data penting sebulan lalu terhapus tanpa sengaja? Di sinilah peran **Daily Backup** menjadi penyelamat nyawa. 
