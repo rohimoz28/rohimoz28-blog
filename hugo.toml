@@ -4,7 +4,8 @@ title = 'Rohimoz28'
 theme = 'PaperMod'
 publishDir = "public"
 enableEmoji = true
-paginate = 5
+[pagination]
+  pagerSize = 5
 
 [params.assets]
   disableFingerprinting = true
