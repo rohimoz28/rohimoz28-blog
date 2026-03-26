@@ -8,15 +8,8 @@
 <title>Postgresql Async Replication Concept | Rohimoz28</title>
 <meta name="keywords" content="database, postgresql">
 <meta name="description" content="Replikasi database adalah salah satu pilar utama dalam membangun sistem yang memiliki ketersediaan tinggi (High Availability). Artikel ini akan membahas secara konseptual bagaimana Streaming Replication dengan mode Asynchronous bekerja, terutama dalam lingkungan yang menggunakan Docker.
-
-1. Arsitektur Replikasi Asynchronous
-Dalam model asynchronous, kita memprioritaskan performa tulis (write performance) pada server utama agar aplikasi tetap responsif.
-
-Primary (Master): Server utama untuk operasi tulis dan baca. Ketika terjadi transaksi, server akan langsung melakukan commit sukses tanpa menunggu konfirmasi dari server replika.
-Standby (Replica): Server cadangan yang bertindak sebagai read-only. Server ini terus-menerus menarik (pull) data perubahan dari Primary, namun dengan potensi jeda waktu (lag) yang sangat kecil.
-
-
-">
+1. Arsitektur Replikasi Asynchronous Dalam model asynchronous, kita memprioritaskan performa tulis (write performance) pada server utama agar aplikasi tetap responsif.
+Primary (Master): Server utama untuk operasi tulis dan baca. Ketika terjadi transaksi, server akan langsung melakukan commit sukses tanpa menunggu konfirmasi dari server replika.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/blog/postgresql-async-replication-concept/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -108,7 +101,7 @@ Standby (Replica): Server cadangan yang bertindak sebagai read-only. Server ini 
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
@@ -118,7 +111,7 @@ Standby (Replica): Server cadangan yang bertindak sebagai read-only. Server ini 
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -133,7 +126,7 @@ Standby (Replica): Server cadangan yang bertindak sebagai read-only. Server ini 
     <h1 class="post-title entry-hint-parent">
       Postgresql Async Replication Concept
     </h1>
-    <div class="post-meta"><span title='2026-03-24 13:43:16 +0700 WIB'>March 24, 2026</span>&nbsp;·&nbsp;3 min
+    <div class="post-meta"><span title='2026-03-24 13:43:16 +0700 +07'>March 24, 2026</span>&nbsp;·&nbsp;3 min
 
 </div>
   </header> <div class="toc">

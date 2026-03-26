@@ -99,7 +99,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
@@ -109,7 +109,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -127,7 +127,7 @@
     <div class="post-description">
       Dummy project untuk replikasi PostgreSQL
     </div>
-    <div class="post-meta"><span title='2025-11-14 14:09:18 +0700 WIB'>November 14, 2025</span>&nbsp;·&nbsp;2 min
+    <div class="post-meta"><span title='2025-11-14 14:09:18 +0700 +07'>November 14, 2025</span>&nbsp;·&nbsp;2 min
 
 </div>
   </header> <div class="toc">
@@ -172,35 +172,35 @@ atau memproses WAL tersebut.</p>
 setelah Primary menerima konfirmasi dari server Standby bahwa mereka telah menerima WAL.</p>
 <p>Tujuan utama adalah jaminan data dan memastikan RPO nol (tidak ada kehilangan data) dalam skenario failover.</p>
 <table>
-  <thead>
-      <tr>
-          <th></th>
-          <th>Pros</th>
-          <th>Cons</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Async</td>
-          <td>- Kinerja Tinggi</td>
-          <td>- Potensi Kehilangan Data</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>- Paling Umum (Diterapkan pada banyak case)</td>
-          <td>- Tidak menjamin RPO (Recovery Point Objective) nol</td>
-      </tr>
-      <tr>
-          <td>Sync</td>
-          <td>- Integritas Data Maksimal</td>
-          <td>- Kinerja Lebih Rendah</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td>- Konsistensi Tinggi</td>
-          <td>- Membutuhkan setidaknya satu Standby yang berfungsi</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th></th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Async</td>
+<td>- Kinerja Tinggi</td>
+<td>- Potensi Kehilangan Data</td>
+</tr>
+<tr>
+<td></td>
+<td>- Paling Umum (Diterapkan pada banyak case)</td>
+<td>- Tidak menjamin RPO (Recovery Point Objective) nol</td>
+</tr>
+<tr>
+<td>Sync</td>
+<td>- Integritas Data Maksimal</td>
+<td>- Kinerja Lebih Rendah</td>
+</tr>
+<tr>
+<td></td>
+<td>- Konsistensi Tinggi</td>
+<td>- Membutuhkan setidaknya satu Standby yang berfungsi</td>
+</tr>
+</tbody>
 </table>
 <p>Memilih tipe streaming data pada proses replikasi database akan sangat bergantung dengan kebutuhan bisnis yang dihadapi.</p>
 <p><strong>A. Kapan Menggunakan ASINKRON (Async)</strong></p>

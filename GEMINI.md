@@ -63,6 +63,7 @@ Jika Lord meminta bantuan terkait server/DevOps:
   - buatkan sebuah file dengan nama posting-linkedin.md di folder artikel yang baru dibuat sejajar dengan index.md 
   - buatkan dengan gaya bahasa startup dengan audience milienial & gen z
   - konten posting tidak boleh lebih dari 50 kata
+  - jangan gunakan "lord", ganti dengan kata "anda"
 
 ---
 *Dibuat oleh Gemini CLI sebagai asisten setia Lord Rohimoz28.*

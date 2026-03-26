@@ -7,16 +7,9 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Install Odoo 17 Menggunakan Docker | Rohimoz28</title>
 <meta name="keywords" content="odoo, docker">
-<meta name="description" content="Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker.
-Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian.
-Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.
-Untuk tuorial kali ini, akan menggunakan source code dari repository
-github saya. Silahkan di fork atau di clone di lokal kalian.
-Struktur Folder
-Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder. conf customize.
-Struktur folder kalian akan tampak seperti ini:
-
-">
+<meta name="description" content="Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker. Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian. Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.
+Untuk tuorial kali ini, akan menggunakan source code dari repository github saya. Silahkan di fork atau di clone di lokal kalian.
+Struktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/blog/install-odoo-menggunakan-docker/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -108,7 +101,7 @@ Struktur folder kalian akan tampak seperti ini:
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
@@ -118,7 +111,7 @@ Struktur folder kalian akan tampak seperti ini:
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -133,7 +126,7 @@ Struktur folder kalian akan tampak seperti ini:
     <h1 class="post-title entry-hint-parent">
       Install Odoo 17 Menggunakan Docker
     </h1>
-    <div class="post-meta"><span title='2024-09-29 18:41:16 +0700 WIB'>September 29, 2024</span>&nbsp;·&nbsp;5 min
+    <div class="post-meta"><span title='2024-09-29 18:41:16 +0700 +07'>September 29, 2024</span>&nbsp;·&nbsp;5 min
 
 </div>
   </header> <div class="toc">
@@ -229,8 +222,8 @@ Yang perlu diperhatikan adalah:</p>
 <li>Package dependensi python yang ingin digunakan</li>
 </ul>
 <p>Pada repo di atas, saya menggunakan konfigurasi Dockerfile seperti dibawah ini:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Docker" data-lang="Docker"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">odoo:17.0</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span> <span style="color:#e6db74">root</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Docker" data-lang="Docker"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> odoo:17.0</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span><span style="color:#e6db74"> root</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apt-get -y update <span style="color:#f92672">&amp;&amp;</span> apt-get install -y git xmlsec1 vim zip<span style="color:#960050;background-color:#1e0010">
 </span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --upgrade --no-cache-dir pip<span style="color:#960050;background-color:#1e0010">
 </span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip3 install --no-cache-dir astor<span style="color:#960050;background-color:#1e0010">

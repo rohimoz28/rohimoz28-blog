@@ -100,7 +100,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
@@ -110,7 +110,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -127,21 +127,43 @@
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">Postgresql Async Replication Concept
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
     </h2>
   </header>
   <div class="entry-content">
     <p>Replikasi database adalah salah satu pilar utama dalam membangun sistem yang memiliki ketersediaan tinggi (High Availability). Artikel ini akan membahas secara konseptual bagaimana Streaming Replication dengan mode Asynchronous bekerja, terutama dalam lingkungan yang menggunakan Docker.
 1. Arsitektur Replikasi Asynchronous Dalam model asynchronous, kita memprioritaskan performa tulis (write performance) pada server utama agar aplikasi tetap responsif.
-Primary (Master): Server utama untuk operasi tulis dan baca. Ketika terjadi transaksi, server akan langsung melakukan commit sukses tanpa menunggu konfirmasi dari server replika. Standby (Replica): Server cadangan yang bertindak sebagai read-only. Server ini terus-menerus menarik (pull) data perubahan dari Primary, namun dengan potensi jeda waktu (lag) yang sangat kecil. ...</p>
+Primary (Master): Server utama untuk operasi tulis dan baca. Ketika terjadi transaksi, server akan langsung melakukan commit sukses tanpa menunggu konfirmasi dari server replika....</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-24 13:43:16 +0700 WIB'>March 24, 2026</span>&nbsp;·&nbsp;3 min</footer>
+  <footer class="entry-footer"><span title='2026-03-24 13:43:16 +0700 +07'>March 24, 2026</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to Postgresql Async Replication Concept" href="http://localhost:1313/blog/postgresql-async-replication-concept/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Strategi Backup Restore Postgresql Docker
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pernahkah Anda membayangkan terbangun di pagi hari dan mendapati database utama Anda corrupt atau data penting sebulan lalu terhapus tanpa sengaja? Di sinilah peran Daily Backup menjadi penyelamat nyawa.
+Artikel ini akan membahas cara melakukan backup database PostgreSQL yang berjalan di dalam Docker Container secara manual, namun dengan pendekatan yang terstruktur untuk kebutuhan jangka panjang.
+Mengapa Kita Butuh Backup Manual? Meskipun sistem otomatis mungkin sudah berjalan, terkadang kita butuh melakukan backup manual untuk:...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-24 13:30:51 +0700 +07'>March 24, 2026</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to Strategi Backup Restore Postgresql Docker" href="http://localhost:1313/blog/strategi-backup-restore-postgresql-docker/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Shell Script Untuk Backup Otomatis
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Latar Belakang Masalah Sebagai seorang programmer Odoo, kita wajib untuk melakukan backup rutin aplikasi. Aplikasi Odoo bisa di backup melalui frontend. Namun, ketika harus dilakukan rutin, adakalanya saya lupa untuk melakukan backup. Dikarenakan load pekerjaan yang sedang banyak, atau memang lupa saja :)
+Maka dari itu, diperlukan suatu mekanisme backup otomatis. Dan ketika proses backup selesai, entah itu berhasil atau gagal, maka akan mengirimkan notifikasi melalui webhook discord.
+Namun, kali ini, saya hanya akan melakukan backup terhadap database-nya saja....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-28 17:50:54 +0700 +07'>March 28, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to Shell Script Untuk Backup Otomatis" href="http://localhost:1313/blog/shell-script-untuk-backup-otomatis/"></a>
 </article>
     </main>
     

@@ -4,16 +4,41 @@
     <title>Postgresql on Rohimoz28</title>
     <link>http://localhost:1313/tags/postgresql/</link>
     <description>Recent content in Postgresql on Rohimoz28</description>
-    <generator>Hugo -- 0.152.2</generator>
+    <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Nov 2025 14:09:18 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2026 13:43:16 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Postgresql Async Replication Concept</title>
+      <link>http://localhost:1313/blog/postgresql-async-replication-concept/</link>
+      <pubDate>Tue, 24 Mar 2026 13:43:16 +0700</pubDate>
+      <guid>http://localhost:1313/blog/postgresql-async-replication-concept/</guid>
+      <description>Replikasi database adalah salah satu pilar utama dalam membangun sistem yang memiliki ketersediaan tinggi (High Availability). Artikel ini akan membahas secara konseptual bagaimana Streaming Replication dengan mode Asynchronous bekerja, terutama dalam lingkungan yang menggunakan Docker.
+1. Arsitektur Replikasi Asynchronous Dalam model asynchronous, kita memprioritaskan performa tulis (write performance) pada server utama agar aplikasi tetap responsif.
+Primary (Master): Server utama untuk operasi tulis dan baca. Ketika terjadi transaksi, server akan langsung melakukan commit sukses tanpa menunggu konfirmasi dari server replika.</description>
+    </item>
+    <item>
+      <title>Strategi Backup Restore Postgresql Docker</title>
+      <link>http://localhost:1313/blog/strategi-backup-restore-postgresql-docker/</link>
+      <pubDate>Tue, 24 Mar 2026 13:30:51 +0700</pubDate>
+      <guid>http://localhost:1313/blog/strategi-backup-restore-postgresql-docker/</guid>
+      <description>Pernahkah Anda membayangkan terbangun di pagi hari dan mendapati database utama Anda corrupt atau data penting sebulan lalu terhapus tanpa sengaja? Di sinilah peran Daily Backup menjadi penyelamat nyawa.
+Artikel ini akan membahas cara melakukan backup database PostgreSQL yang berjalan di dalam Docker Container secara manual, namun dengan pendekatan yang terstruktur untuk kebutuhan jangka panjang.
+Mengapa Kita Butuh Backup Manual? Meskipun sistem otomatis mungkin sudah berjalan, terkadang kita butuh melakukan backup manual untuk:</description>
+    </item>
     <item>
       <title>PostgreSQL Replication</title>
       <link>http://localhost:1313/blog/postgresql-replikasi-async/</link>
       <pubDate>Fri, 14 Nov 2025 14:09:18 +0700</pubDate>
       <guid>http://localhost:1313/blog/postgresql-replikasi-async/</guid>
       <description>Dummy project untuk replikasi PostgreSQL</description>
+    </item>
+    <item>
+      <title>Shell Script Untuk Backup Otomatis</title>
+      <link>http://localhost:1313/blog/shell-script-untuk-backup-otomatis/</link>
+      <pubDate>Fri, 28 Mar 2025 17:50:54 +0700</pubDate>
+      <guid>http://localhost:1313/blog/shell-script-untuk-backup-otomatis/</guid>
+      <description>Backup aplikasi adalah sesuatu yang wajib dilakukan. Jika rutin dilakukan, ada baiknya kita buat menjadi otomatis.</description>
     </item>
   </channel>
 </rss>

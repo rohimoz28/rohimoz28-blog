@@ -7,16 +7,10 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Override ir.model.access.csv | Rohimoz28</title>
 <meta name="keywords" content="odoo">
-<meta name="description" content="Latar Belakang Masalah
-Biasanya, ketika kita meng-install module odoo dari third party, sudah otomatis ada pengaturan ir.model.access.csv bawaan modul tersebut. Ada kalanya,
-kita ingin menyesuaikan hak akses tersebut dengan kebutuhan di modul kustomisasi kita.
-Solusi
-Maka dari itu, kita perlu melakukan override hak akses yg ada di ir.model.access.csv.
-Override ir.model.access.csv
-Dibawah ini adalah contoh hak akses di ir.model.access.csv yang ingin kita override.
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_holidays_status_manager,hr.holidays.status manager,model_hr_leave_type,hr_holidays.group_hr_holidays_manager,1,1,1,1
-Untuk meng-override nya, silahkan buka file ir.model.access.csv di modul kustomisasi kalian dan ubah menjadi kira-kira seperti ini,">
+<meta name="description" content="Latar Belakang Masalah Biasanya, ketika kita meng-install module odoo dari third party, sudah otomatis ada pengaturan ir.model.access.csv bawaan modul tersebut. Ada kalanya, kita ingin menyesuaikan hak akses tersebut dengan kebutuhan di modul kustomisasi kita.
+Solusi Maka dari itu, kita perlu melakukan override hak akses yg ada di ir.model.access.csv.
+Override ir.model.access.csv Dibawah ini adalah contoh hak akses di ir.model.access.csv yang ingin kita override.
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlinkaccess_hr_holidays_status_manager,hr.holidays.status manager,model_hr_leave_type,hr_holidays.group_hr_holidays_manager,1,1,1,1 Untuk meng-override nya, silahkan buka file ir.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/blog/override-ir-model-access/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -108,7 +102,7 @@ Untuk meng-override nya, silahkan buka file ir.model.access.csv di modul kustomi
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
@@ -118,7 +112,7 @@ Untuk meng-override nya, silahkan buka file ir.model.access.csv di modul kustomi
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -133,7 +127,7 @@ Untuk meng-override nya, silahkan buka file ir.model.access.csv di modul kustomi
     <h1 class="post-title entry-hint-parent">
       Override ir.model.access.csv
     </h1>
-    <div class="post-meta"><span title='2024-07-29 18:41:16 +0700 WIB'>July 29, 2024</span>&nbsp;·&nbsp;1 min
+    <div class="post-meta"><span title='2024-07-29 18:41:16 +0700 +07'>July 29, 2024</span>&nbsp;·&nbsp;1 min
 
 </div>
   </header> <div class="toc">
@@ -166,12 +160,12 @@ kita ingin menyesuaikan hak akses tersebut dengan kebutuhan di modul kustomisasi
 <p>Maka dari itu, kita perlu melakukan override hak akses yg ada di <code>ir.model.access.csv</code>.</p>
 <h3 id="override-irmodelaccesscsv">Override ir.model.access.csv<a hidden class="anchor" aria-hidden="true" href="#override-irmodelaccesscsv">#</a></h3>
 <p>Dibawah ini adalah contoh hak akses di <code>ir.model.access.csv</code> yang ingin kita override.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csv" data-lang="csv"><span style="display:flex;"><span><span style="color:#e6db74">id</span>,<span style="color:#e6db74">name</span>,<span style="color:#e6db74">model_id:id</span>,<span style="color:#e6db74">group_id:id</span>,<span style="color:#e6db74">perm_read</span>,<span style="color:#e6db74">perm_write</span>,<span style="color:#e6db74">perm_create</span>,<span style="color:#e6db74">perm_unlink</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">access_hr_holidays_status_manager</span>,<span style="color:#e6db74">hr.holidays.status manager</span>,<span style="color:#e6db74">model_hr_leave_type</span>,<span style="color:#e6db74">hr_holidays.group_hr_holidays_manager</span>,<span style="color:#e6db74">1</span>,<span style="color:#e6db74">1</span>,<span style="color:#e6db74">1</span>,<span style="color:#e6db74">1</span>
-</span></span></code></pre></div><p>Untuk meng-override nya, silahkan buka file <code>ir.model.access.csv</code> di modul kustomisasi kalian dan ubah menjadi kira-kira seperti ini,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csv" data-lang="csv"><span style="display:flex;"><span><span style="color:#e6db74">id</span>,<span style="color:#e6db74">name</span>,<span style="color:#e6db74">model_id:id</span>,<span style="color:#e6db74">group_id:id</span>,<span style="color:#e6db74">perm_read</span>,<span style="color:#e6db74">perm_write</span>,<span style="color:#e6db74">perm_create</span>,<span style="color:#e6db74">perm_unlink</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">hr_holidays.access_hr_holidays_status_manager</span>,<span style="color:#e6db74">hr.holidays.status manager</span>,<span style="color:#e6db74">model_hr_leave_type</span>,<span style="color:#e6db74">my_hr_tms.module_sub_category_permission_code_manager</span>,<span style="color:#e6db74">1</span>,<span style="color:#e6db74">1</span>,<span style="color:#e6db74">1</span>,<span style="color:#e6db74">1</span>
-</span></span></code></pre></div><ul>
+<pre tabindex="0"><code class="language-csv" data-lang="csv">id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_holidays_status_manager,hr.holidays.status manager,model_hr_leave_type,hr_holidays.group_hr_holidays_manager,1,1,1,1
+</code></pre><p>Untuk meng-override nya, silahkan buka file <code>ir.model.access.csv</code> di modul kustomisasi kalian dan ubah menjadi kira-kira seperti ini,</p>
+<pre tabindex="0"><code class="language-csv" data-lang="csv">id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+hr_holidays.access_hr_holidays_status_manager,hr.holidays.status manager,model_hr_leave_type,my_hr_tms.module_sub_category_permission_code_manager,1,1,1,1
+</code></pre><ul>
 <li>
 <p>pada bagian <code>id</code> diubah menjadi <code>hr_holidays.access_hr_holidays_status_manager</code>. <code>hr_holidays</code> adalah nama modul yang kita override.</p>
 </li>

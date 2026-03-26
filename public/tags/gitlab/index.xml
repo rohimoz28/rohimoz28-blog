@@ -4,7 +4,7 @@
     <title>Gitlab on Rohimoz28</title>
     <link>http://localhost:1313/tags/gitlab/</link>
     <description>Recent content in Gitlab on Rohimoz28</description>
-    <generator>Hugo -- 0.152.2</generator>
+    <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Mar 2026 23:07:42 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
@@ -13,13 +13,8 @@
       <link>http://localhost:1313/blog/gitlab-cicd/</link>
       <pubDate>Sat, 07 Mar 2026 23:07:42 +0700</pubDate>
       <guid>http://localhost:1313/blog/gitlab-cicd/</guid>
-      <description>&lt;h1 id=&#34;membangun-cicd-pipeline-untuk-odoo-dengan-gitlab-dan-shell-executor&#34;&gt;Membangun CI/CD Pipeline untuk Odoo dengan GitLab dan Shell Executor&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Panduan konseptual membangun pipeline deployment otomatis yang aman, ringan, dan efisien untuk aplikasi Odoo berbasis Docker.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;pendahuluan-masalah-yang-diselesaikan&#34;&gt;Pendahuluan: Masalah yang Diselesaikan&lt;/h2&gt;
-&lt;p&gt;Dalam lingkungan pengembangan yang aktif, proses deployment manual adalah sumber masalah yang konsisten. Developer harus masuk ke server, menarik kode terbaru, lalu merestart container secara manual — sebuah rutinitas yang memakan waktu, rawan human error, dan tidak terdokumentasi dengan baik.&lt;/p&gt;</description>
+      <description>Membangun CI/CD Pipeline untuk Odoo dengan GitLab dan Shell Executor Panduan konseptual membangun pipeline deployment otomatis yang aman, ringan, dan efisien untuk aplikasi Odoo berbasis Docker.
+Pendahuluan: Masalah yang Diselesaikan Dalam lingkungan pengembangan yang aktif, proses deployment manual adalah sumber masalah yang konsisten. Developer harus masuk ke server, menarik kode terbaru, lalu merestart container secara manual — sebuah rutinitas yang memakan waktu, rawan human error, dan tidak terdokumentasi dengan baik.</description>
     </item>
     <item>
       <title>Install Gitlab Runner</title>
