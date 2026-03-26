@@ -1,7 +1,7 @@
 +++
 title = 'Setup Formatter Odoo'
 date = '2026-03-26T13:51:58+07:00'
-draft = true
+draft = false
 description = 'Tutorial Setup Formatter untuk Odoo di VSCode dan PyCharm'
 categories= ['Odoo']
 tags = ['python', 'odoo']
