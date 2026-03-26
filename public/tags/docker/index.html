@@ -100,7 +100,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
@@ -110,7 +110,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -126,17 +126,16 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Shell Script Untuk Backup Otomatis
+    <h2 class="entry-hint-parent">Strategi Backup Restore Postgresql Docker
     </h2>
   </header>
   <div class="entry-content">
-    <p>Latar Belakang Masalah Sebagai seorang programmer Odoo, kita wajib untuk melakukan backup rutin aplikasi. Aplikasi Odoo bisa di backup melalui frontend. Namun, ketika harus dilakukan rutin, adakalanya saya lupa untuk melakukan backup. Dikarenakan load pekerjaan yang sedang banyak, atau memang lupa saja :)
-Maka dari itu, diperlukan suatu mekanisme backup otomatis. Dan ketika proses backup selesai, entah itu berhasil atau gagal, maka akan mengirimkan notifikasi melalui webhook discord.
-Namun, kali ini, saya hanya akan melakukan backup terhadap database-nya saja. Dikarenakan untuk kebutuhannya hanya diperlukan backup transaksi selama 7 hari terakhir.
-...</p>
+    <p>Pernahkah Anda membayangkan terbangun di pagi hari dan mendapati database utama Anda corrupt atau data penting sebulan lalu terhapus tanpa sengaja? Di sinilah peran Daily Backup menjadi penyelamat nyawa.
+Artikel ini akan membahas cara melakukan backup database PostgreSQL yang berjalan di dalam Docker Container secara manual, namun dengan pendekatan yang terstruktur untuk kebutuhan jangka panjang.
+Mengapa Kita Butuh Backup Manual? Meskipun sistem otomatis mungkin sudah berjalan, terkadang kita butuh melakukan backup manual untuk:...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-28 17:50:54 +0700 WIB'>March 28, 2025</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to Shell Script Untuk Backup Otomatis" href="http://localhost:1313/blog/shell-script-untuk-backup-otomatis/"></a>
+  <footer class="entry-footer"><span title='2026-03-24 13:30:51 +0700 +07'>March 24, 2026</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to Strategi Backup Restore Postgresql Docker" href="http://localhost:1313/blog/strategi-backup-restore-postgresql-docker/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -149,10 +148,9 @@ Namun, kali ini, saya hanya akan melakukan backup terhadap database-nya saja. Di
 Jika belum dan ingin install GitLab self-hosted bisa lihat caranya disini.
 Jika ingin install GitLab Runner menggunakan docker bisa lihat caranya disini.
 Buat job sederhana Sekarang kita akan coba membuat job sederhana. Job yang dijalankan akan seperti ini:
-Job akan ke trigger jika ada perubahan di branch main. Job akan menjalankan stages build dan deploy. Job akan dijalankan di dalam docker. Membuat file .gitlab-ci.yml stages:- build- deploybuild:stage: buildimage: alpine:latestscript:- echo &#34;Starting build stages...&#34;- echo &#34;Running another command...&#34;deploy:stage: deployimage: alpine:latestscript:- echo &#34;Starting deploy stages...&#34;- echo &#34;Running another command...&#34;- echo &#34;job finished!&#34; Kemudian, save perubahan tersebut pada gitlab atau push perubahan tersebut ke gitlab pada branch main.
-...</p>
+Job akan ke trigger jika ada perubahan di branch main. Job akan menjalankan stages build dan deploy. Job akan dijalankan di dalam docker....</p>
   </div>
-  <footer class="entry-footer"><span title='2025-02-20 15:32:40 +0700 WIB'>February 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2025-02-20 15:32:40 +0700 +07'>February 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Konfigurasi Dasar CI/CD Gitlab" href="http://localhost:1313/blog/konfigurasi-dasar-cicd-gitlab/"></a>
 </article>
 
@@ -165,10 +163,9 @@ Job akan ke trigger jika ada perubahan di branch main. Job akan menjalankan stag
     <p>Latar Belakang Masalah Untuk melakukan debugging di odoo, ada beberapa cara. Yang paling direkomendasikan adalah menggunakan python package pdb. Sayangnya, ketika develop Odoo menggunakan docker. Perlu ada konfigurasi khusus agar kita bisa menggunakan package tersebut.
 Dalam praktik kali ini saya mengasumsikan teman-teman sudah menginstall odoo menggunakan docker. Kali ini, kita akan menggunakan VSCode sebagai text editor.
 Ada dua cara untuk melakukan debugging saat develop menggunakan docker.
-1. Menggunakan Metode Attach Container Baik digunakan di local development environment. Karena tidak akan mengganggu STDIN dari program dan bisa melalui remote debugging. Tambahkan kedua line dibawah ini pada pengaturan docker-compose.yaml.
-...</p>
+1. Menggunakan Metode Attach Container Baik digunakan di local development environment....</p>
   </div>
-  <footer class="entry-footer"><span title='2024-12-16 13:27:39 +0700 WIB'>December 16, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2024-12-16 13:27:39 +0700 +07'>December 16, 2024</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Cara Debug Odoo Di Docker Menggunakan Pdb" href="http://localhost:1313/blog/cara-debug-odoo-di-docker-menggunakan-pdb/"></a>
 </article>
 
@@ -180,7 +177,7 @@ Ada dua cara untuk melakukan debugging saat develop menggunakan docker.
   <div class="entry-content">
     <p>A brief step of installing odoo multi instance</p>
   </div>
-  <footer class="entry-footer"><span title='2024-09-29 19:03:00 +0700 WIB'>September 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2024-09-29 19:03:00 +0700 +07'>September 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Docker Multi Instance Odoo" href="http://localhost:1313/blog/install-multi-odoo-instance-menggunakan-docker/"></a>
 </article>
 
@@ -192,17 +189,25 @@ Ada dua cara untuk melakukan debugging saat develop menggunakan docker.
   <div class="entry-content">
     <p>Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker. Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian. Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.
 Untuk tuorial kali ini, akan menggunakan source code dari repository github saya. Silahkan di fork atau di clone di lokal kalian.
-Struktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder. conf customize. Struktur folder kalian akan tampak seperti ini: ...</p>
+Struktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder....</p>
   </div>
-  <footer class="entry-footer"><span title='2024-09-29 18:41:16 +0700 WIB'>September 29, 2024</span>&nbsp;·&nbsp;5 min</footer>
+  <footer class="entry-footer"><span title='2024-09-29 18:41:16 +0700 +07'>September 29, 2024</span>&nbsp;·&nbsp;5 min</footer>
   <a class="entry-link" aria-label="post link to Install Odoo 17 Menggunakan Docker" href="http://localhost:1313/blog/install-odoo-menggunakan-docker/"></a>
 </article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="http://localhost:1313/tags/docker/page/2/">Next&nbsp;&nbsp;»
-    </a>
-  </nav>
-</footer>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Relokasi Docker
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Latar Belakang Masalah Secara default, direktori docker terletak pada /var/lib/docker. Ada kalanya, ketika docker image , volume dan container sudah terlalu besar sehingga memakan storage. Kita ingin memindahkan letak direktori docker ini agar tidak memakan storage root kita yang pada akhirnya akan menghentikan service docker itu sendiri.
+Solusi Maka dari itu, kita perlu merelokasi direktori default docker ini ke partisi lain yang memiliki kapasitas lebih besar daripada partisi root.
+Persiapan stop semua docker yang sedang berjalan...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-29 18:41:16 +0700 +07'>August 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Relokasi Docker" href="http://localhost:1313/blog/relokasi-docker/"></a>
+</article>
     </main>
     
 <footer class="footer">

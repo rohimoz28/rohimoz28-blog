@@ -2,30 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Odoo on Rohimoz28</title>
-    <link>//localhost:1313/categories/odoo/</link>
+    <link>http://localhost:1313/categories/odoo/</link>
     <description>Recent content in Odoo on Rohimoz28</description>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Sep 2024 18:41:16 +0700</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/odoo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Mar 2026 13:51:58 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/odoo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Install Odoo 17 Menggunakan Docker</title>
-      <link>//localhost:1313/posts/tutorial-install-odoo-17-menggunakan-docker/</link>
-      <pubDate>Sun, 29 Sep 2024 18:41:16 +0700</pubDate>
-      <guid>//localhost:1313/posts/tutorial-install-odoo-17-menggunakan-docker/</guid>
-      <description>&lt;p&gt;Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker.
-Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di operating sistem kalian.
-Jika belum, silahkan ikuti &lt;a href=&#34;%5Bhttps://%5D(https://docs.docker.com/engine/install/)&#34;&gt;Tutorial Install Docker&lt;/a&gt; dari laman resminya.&lt;/p&gt;
-&lt;p&gt;Jika sudah, akan ada beberapa langkah yang kamu harus ikuti sampai Odoo dan Postgresql berhasil terinstall dan siap kamu gunakan.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Buat Struktur Direktori&lt;/li&gt;
-&lt;li&gt;Build Dockerfile untuk Odoo&lt;/li&gt;
-&lt;li&gt;Buat Docker Compose&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;struktur-direktori&#34;&gt;Struktur Direktori&lt;/h3&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/01/struktur-direktori.jpg?width=20px&amp;amp;height=20px&#34; alt=&#34;struktur-direktori&#34;  /&gt;
-
-{{ $image := resources.Get &amp;ldquo;/01/struktur-direktori.jpg&amp;rdquo; }}&lt;/p&gt;</description>
+      <title>Setup Formatter Odoo</title>
+      <link>http://localhost:1313/blog/setup-formatter-odoo/</link>
+      <pubDate>Thu, 26 Mar 2026 13:51:58 +0700</pubDate>
+      <guid>http://localhost:1313/blog/setup-formatter-odoo/</guid>
+      <description>Standarisasi Code Formatting Python dengan Black, isort, dan Flake8 Setup lengkap untuk VSCode dan PyCharm pada project Odoo v17
+Overview Ketika tim developer bekerja pada codebase yang sama, perbedaan gaya penulisan kode antar individu dapat menjadi sumber noise yang tidak perlu — mulai dari perbedaan indentasi, urutan import, hingga panjang baris kode. Hal ini membuat code review menjadi lebih sulit dan git diff menjadi lebih berisik.
+Solusinya adalah menggunakan code formatter dan linter yang dijalankan secara konsisten di semua environment developer.</description>
     </item>
   </channel>
 </rss>

@@ -100,7 +100,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
@@ -110,7 +110,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -131,11 +131,10 @@
   </header>
   <div class="entry-content">
     <p>Membangun CI/CD Pipeline untuk Odoo dengan GitLab dan Shell Executor Panduan konseptual membangun pipeline deployment otomatis yang aman, ringan, dan efisien untuk aplikasi Odoo berbasis Docker.
-Pendahuluan: Masalah yang Diselesaikan Dalam lingkungan pengembangan yang aktif, proses deployment manual adalah sumber masalah yang konsisten. Developer harus masuk ke server, menarik kode terbaru, lalu merestart container secara manual — sebuah rutinitas yang memakan waktu, rawan human error, dan tidak terdokumentasi dengan baik.
-...</p>
+Pendahuluan: Masalah yang Diselesaikan Dalam lingkungan pengembangan yang aktif, proses deployment manual adalah sumber masalah yang konsisten. Developer harus masuk ke server, menarik kode terbaru, lalu merestart container secara manual — sebuah rutinitas yang memakan waktu, rawan human error, dan tidak terdokumentasi dengan baik....</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-07 23:07:42 +0700 WIB'>March 7, 2026</span>&nbsp;·&nbsp;7 min</footer>
-  <a class="entry-link" aria-label="post link to Implementasi CI/CD menggunakan GitLab & GitLab Runner Untuk Project Odoo" href="http://localhost:1313/blog/gitlab-cicd/"></a>
+  <footer class="entry-footer"><span title='2026-03-07 23:07:42 +0700 +07'>March 7, 2026</span>&nbsp;·&nbsp;7 min</footer>
+  <a class="entry-link" aria-label="post link to Implementasi CI/CD menggunakan GitLab &amp; GitLab Runner Untuk Project Odoo" href="http://localhost:1313/blog/gitlab-cicd/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -146,10 +145,9 @@ Pendahuluan: Masalah yang Diselesaikan Dalam lingkungan pengembangan yang aktif,
   <div class="entry-content">
     <p>Latar Belakang Masalah Sebagai seorang programmer Odoo, kita wajib untuk melakukan backup rutin aplikasi. Aplikasi Odoo bisa di backup melalui frontend. Namun, ketika harus dilakukan rutin, adakalanya saya lupa untuk melakukan backup. Dikarenakan load pekerjaan yang sedang banyak, atau memang lupa saja :)
 Maka dari itu, diperlukan suatu mekanisme backup otomatis. Dan ketika proses backup selesai, entah itu berhasil atau gagal, maka akan mengirimkan notifikasi melalui webhook discord.
-Namun, kali ini, saya hanya akan melakukan backup terhadap database-nya saja. Dikarenakan untuk kebutuhannya hanya diperlukan backup transaksi selama 7 hari terakhir.
-...</p>
+Namun, kali ini, saya hanya akan melakukan backup terhadap database-nya saja....</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-28 17:50:54 +0700 WIB'>March 28, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <footer class="entry-footer"><span title='2025-03-28 17:50:54 +0700 +07'>March 28, 2025</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to Shell Script Untuk Backup Otomatis" href="http://localhost:1313/blog/shell-script-untuk-backup-otomatis/"></a>
 </article>
 
@@ -163,10 +161,9 @@ Namun, kali ini, saya hanya akan melakukan backup terhadap database-nya saja. Di
 Jika belum dan ingin install GitLab self-hosted bisa lihat caranya disini.
 Jika ingin install GitLab Runner menggunakan docker bisa lihat caranya disini.
 Buat job sederhana Sekarang kita akan coba membuat job sederhana. Job yang dijalankan akan seperti ini:
-Job akan ke trigger jika ada perubahan di branch main. Job akan menjalankan stages build dan deploy. Job akan dijalankan di dalam docker. Membuat file .gitlab-ci.yml stages:- build- deploybuild:stage: buildimage: alpine:latestscript:- echo &#34;Starting build stages...&#34;- echo &#34;Running another command...&#34;deploy:stage: deployimage: alpine:latestscript:- echo &#34;Starting deploy stages...&#34;- echo &#34;Running another command...&#34;- echo &#34;job finished!&#34; Kemudian, save perubahan tersebut pada gitlab atau push perubahan tersebut ke gitlab pada branch main.
-...</p>
+Job akan ke trigger jika ada perubahan di branch main. Job akan menjalankan stages build dan deploy. Job akan dijalankan di dalam docker....</p>
   </div>
-  <footer class="entry-footer"><span title='2025-02-20 15:32:40 +0700 WIB'>February 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2025-02-20 15:32:40 +0700 +07'>February 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Konfigurasi Dasar CI/CD Gitlab" href="http://localhost:1313/blog/konfigurasi-dasar-cicd-gitlab/"></a>
 </article>
 
@@ -178,10 +175,9 @@ Job akan ke trigger jika ada perubahan di branch main. Job akan menjalankan stag
   <div class="entry-content">
     <p>Latar Belakang Masalah Biasanya, kita dapat melakuakn backup odoo berikut database nya melalui front end aplikasi. Tapi, ketika ukuran database sudah besar (file compress &gt; 2GB) akan timbul masalah gagal backup. Biasanya karena faktor koneksi internet yang tidak stabil.
 Environment Dalam contoh kasus kali ini, penulis menggunakan Odoo dan Postgresql yang dijalankan menggunakan docker. Pada umumnya, cara yang diguanakan jika tidak memnggunakan docker adalah sama. Hanya beda syntax.
-Solusi Untuk latar belakang masalah yang dikemukakan diatas, perlu mekanisme backup lain untuk mengakomodasi database Odoo yang tidak bisa di backup dari front end.
-...</p>
+Solusi Untuk latar belakang masalah yang dikemukakan diatas, perlu mekanisme backup lain untuk mengakomodasi database Odoo yang tidak bisa di backup dari front end....</p>
   </div>
-  <footer class="entry-footer"><span title='2025-01-25 19:55:30 +0700 WIB'>January 25, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2025-01-25 19:55:30 +0700 +07'>January 25, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Cara Backup Odoo Dan Postgresql" href="http://localhost:1313/blog/cara-manual-backup-odoo/"></a>
 </article>
 
@@ -194,18 +190,67 @@ Solusi Untuk latar belakang masalah yang dikemukakan diatas, perlu mekanisme bac
     <p>Latar Belakang Masalah Untuk melakukan debugging di odoo, ada beberapa cara. Yang paling direkomendasikan adalah menggunakan python package pdb. Sayangnya, ketika develop Odoo menggunakan docker. Perlu ada konfigurasi khusus agar kita bisa menggunakan package tersebut.
 Dalam praktik kali ini saya mengasumsikan teman-teman sudah menginstall odoo menggunakan docker. Kali ini, kita akan menggunakan VSCode sebagai text editor.
 Ada dua cara untuk melakukan debugging saat develop menggunakan docker.
-1. Menggunakan Metode Attach Container Baik digunakan di local development environment. Karena tidak akan mengganggu STDIN dari program dan bisa melalui remote debugging. Tambahkan kedua line dibawah ini pada pengaturan docker-compose.yaml.
-...</p>
+1. Menggunakan Metode Attach Container Baik digunakan di local development environment....</p>
   </div>
-  <footer class="entry-footer"><span title='2024-12-16 13:27:39 +0700 WIB'>December 16, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2024-12-16 13:27:39 +0700 +07'>December 16, 2024</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Cara Debug Odoo Di Docker Menggunakan Pdb" href="http://localhost:1313/blog/cara-debug-odoo-di-docker-menggunakan-pdb/"></a>
 </article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="http://localhost:1313/tags/odoo/page/2/">Next&nbsp;&nbsp;»
-    </a>
-  </nav>
-</footer>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Cara Menyimpan Query SQL Pada Modul Odoo
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Masalahnya, praktik meletakkan query procedure PostgreSQL langsung di database lalu memanggilnya dengan function execute di kode python merupakan hal yang buruk ketika procedure tersebut dikerjakan oleh beberapa orang.
+Sayangnya, ketika banyak orang mengerjakan query procedure langsung di database, bisa mengakibatkan inkonsistensi kode.
+Untuk itu, diperlukan suatu cara untuk mensinkronkan query sql yang di kerjakan di dalam team.
+Buat Folder db Pertama, kita buat folder baru didalam modul kustom kita dengan nama db....</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-11-26 18:41:16 +0700 +07'>November 26, 2024</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to Cara Menyimpan Query SQL Pada Modul Odoo" href="http://localhost:1313/blog/cara-menyimpan-query-sql-pada-module-odoo/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Docker Multi Instance Odoo
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A brief step of installing odoo multi instance</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-29 19:03:00 +0700 +07'>September 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Docker Multi Instance Odoo" href="http://localhost:1313/blog/install-multi-odoo-instance-menggunakan-docker/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Install Odoo 17 Menggunakan Docker
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker. Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian. Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.
+Untuk tuorial kali ini, akan menggunakan source code dari repository github saya. Silahkan di fork atau di clone di lokal kalian.
+Struktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder....</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-29 18:41:16 +0700 +07'>September 29, 2024</span>&nbsp;·&nbsp;5 min</footer>
+  <a class="entry-link" aria-label="post link to Install Odoo 17 Menggunakan Docker" href="http://localhost:1313/blog/install-odoo-menggunakan-docker/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Override ir.model.access.csv
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Latar Belakang Masalah Biasanya, ketika kita meng-install module odoo dari third party, sudah otomatis ada pengaturan ir.model.access.csv bawaan modul tersebut. Ada kalanya, kita ingin menyesuaikan hak akses tersebut dengan kebutuhan di modul kustomisasi kita.
+Solusi Maka dari itu, kita perlu melakukan override hak akses yg ada di ir.model.access.csv.
+Override ir.model.access.csv Dibawah ini adalah contoh hak akses di ir.model.access.csv yang ingin kita override.
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlinkaccess_hr_holidays_status_manager,hr.holidays.status manager,model_hr_leave_type,hr_holidays.group_hr_holidays_manager,1,1,1,1 Untuk meng-override nya, silahkan buka file ir....</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-07-29 18:41:16 +0700 +07'>July 29, 2024</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to Override ir.model.access.csv" href="http://localhost:1313/blog/override-ir-model-access/"></a>
+</article>
     </main>
     
 <footer class="footer">

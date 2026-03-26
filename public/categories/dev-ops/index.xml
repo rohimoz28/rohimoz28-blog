@@ -4,17 +4,10 @@
     <title>Dev Ops on Rohimoz28</title>
     <link>http://localhost:1313/categories/dev-ops/</link>
     <description>Recent content in Dev Ops on Rohimoz28</description>
-    <generator>Hugo -- 0.152.2</generator>
+    <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Mar 2025 17:50:54 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 07 Mar 2025 21:13:39 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/dev-ops/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Shell Script Untuk Backup Otomatis</title>
-      <link>http://localhost:1313/blog/shell-script-untuk-backup-otomatis/</link>
-      <pubDate>Fri, 28 Mar 2025 17:50:54 +0700</pubDate>
-      <guid>http://localhost:1313/blog/shell-script-untuk-backup-otomatis/</guid>
-      <description>Backup aplikasi adalah sesuatu yang wajib dilakukan. Jika rutin dilakukan, ada baiknya kita buat menjadi otomatis.</description>
-    </item>
     <item>
       <title>Cara Koneksi SSH Tanpa Password</title>
       <link>http://localhost:1313/blog/cara-koneksi-ssh-tanpa-password/</link>
@@ -62,14 +55,9 @@
       <link>http://localhost:1313/blog/relokasi-docker/</link>
       <pubDate>Thu, 29 Aug 2024 18:41:16 +0700</pubDate>
       <guid>http://localhost:1313/blog/relokasi-docker/</guid>
-      <description>&lt;h3 id=&#34;latar-belakang-masalah&#34;&gt;Latar Belakang Masalah&lt;/h3&gt;
-&lt;p&gt;Secara default, direktori docker terletak pada &lt;code&gt;/var/lib/docker&lt;/code&gt;. Ada kalanya, ketika docker image , volume dan container sudah terlalu besar sehingga memakan storage. Kita ingin memindahkan letak direktori docker ini agar tidak memakan storage &lt;code&gt;root&lt;/code&gt; kita yang pada akhirnya akan menghentikan service docker itu sendiri.&lt;/p&gt;
-&lt;h3 id=&#34;solusi&#34;&gt;Solusi&lt;/h3&gt;
-&lt;p&gt;Maka dari itu, kita perlu merelokasi direktori default docker ini ke partisi lain yang memiliki kapasitas lebih besar daripada partisi &lt;code&gt;root&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;persiapan&#34;&gt;Persiapan&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;stop semua docker yang sedang berjalan&lt;/p&gt;</description>
+      <description>Latar Belakang Masalah Secara default, direktori docker terletak pada /var/lib/docker. Ada kalanya, ketika docker image , volume dan container sudah terlalu besar sehingga memakan storage. Kita ingin memindahkan letak direktori docker ini agar tidak memakan storage root kita yang pada akhirnya akan menghentikan service docker itu sendiri.
+Solusi Maka dari itu, kita perlu merelokasi direktori default docker ini ke partisi lain yang memiliki kapasitas lebih besar daripada partisi root.
+Persiapan stop semua docker yang sedang berjalan</description>
     </item>
   </channel>
 </rss>

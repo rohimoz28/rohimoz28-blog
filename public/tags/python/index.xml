@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on Rohimoz28</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on Rohimoz28</description>
+    <generator>Hugo -- 0.126.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Mar 2026 13:51:58 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Formatter Odoo</title>
+      <link>http://localhost:1313/blog/setup-formatter-odoo/</link>
+      <pubDate>Thu, 26 Mar 2026 13:51:58 +0700</pubDate>
+      <guid>http://localhost:1313/blog/setup-formatter-odoo/</guid>
+      <description>Standarisasi Code Formatting Python dengan Black, isort, dan Flake8 Setup lengkap untuk VSCode dan PyCharm pada project Odoo v17
+Overview Ketika tim developer bekerja pada codebase yang sama, perbedaan gaya penulisan kode antar individu dapat menjadi sumber noise yang tidak perlu — mulai dari perbedaan indentasi, urutan import, hingga panjang baris kode. Hal ini membuat code review menjadi lebih sulit dan git diff menjadi lebih berisik.
+Solusinya adalah menggunakan code formatter dan linter yang dijalankan secara konsisten di semua environment developer.</description>
+    </item>
+  </channel>
+</rss>

@@ -100,7 +100,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
@@ -110,7 +110,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -131,11 +131,10 @@
   </header>
   <div class="entry-content">
     <p>Membangun CI/CD Pipeline untuk Odoo dengan GitLab dan Shell Executor Panduan konseptual membangun pipeline deployment otomatis yang aman, ringan, dan efisien untuk aplikasi Odoo berbasis Docker.
-Pendahuluan: Masalah yang Diselesaikan Dalam lingkungan pengembangan yang aktif, proses deployment manual adalah sumber masalah yang konsisten. Developer harus masuk ke server, menarik kode terbaru, lalu merestart container secara manual — sebuah rutinitas yang memakan waktu, rawan human error, dan tidak terdokumentasi dengan baik.
-...</p>
+Pendahuluan: Masalah yang Diselesaikan Dalam lingkungan pengembangan yang aktif, proses deployment manual adalah sumber masalah yang konsisten. Developer harus masuk ke server, menarik kode terbaru, lalu merestart container secara manual — sebuah rutinitas yang memakan waktu, rawan human error, dan tidak terdokumentasi dengan baik....</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-07 23:07:42 +0700 WIB'>March 7, 2026</span>&nbsp;·&nbsp;7 min</footer>
-  <a class="entry-link" aria-label="post link to Implementasi CI/CD menggunakan GitLab & GitLab Runner Untuk Project Odoo" href="http://localhost:1313/blog/gitlab-cicd/"></a>
+  <footer class="entry-footer"><span title='2026-03-07 23:07:42 +0700 +07'>March 7, 2026</span>&nbsp;·&nbsp;7 min</footer>
+  <a class="entry-link" aria-label="post link to Implementasi CI/CD menggunakan GitLab &amp; GitLab Runner Untuk Project Odoo" href="http://localhost:1313/blog/gitlab-cicd/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -145,10 +144,9 @@ Pendahuluan: Masalah yang Diselesaikan Dalam lingkungan pengembangan yang aktif,
   </header>
   <div class="entry-content">
     <p>Latar Belakang Masalah Dalam proses deployment fitur ke user. Biasanya, ketika developer sudah menyelesaikan suatu fitur, maka terlebih dahulu akan melakukan push source code fitur ke repository (misal: GitLab). Setelahnya, perubahan terbaru dari repository akan di pull di server untuk selanjutnya dilakukan pengetesan dan lainnya. Kira - kira alur kerjanya akan seperti ini:
-Developer push branch baru ke remote repository. Developer melakukan merge berisi source code fitur baru ke branch development/staging/production. Developer login ke server, masuk ke directory project. Lalu melakukan pull source code project terbaru. Terakhir, developer akan restart aplikasi. Menggunakan CI/CD bisa menghilangkan langkah nomer 3 dan 4. Sebagai gantinya, kita bisa melakukan trigger langkah nomer 3 &amp; 4 ketika ada perubahan pada branch repository (langkah nomer 2).
-...</p>
+Developer push branch baru ke remote repository. Developer melakukan merge berisi source code fitur baru ke branch development/staging/production....</p>
   </div>
-  <footer class="entry-footer"><span title='2025-02-10 08:38:29 +0700 WIB'>February 10, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2025-02-10 08:38:29 +0700 +07'>February 10, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Install Gitlab Runner" href="http://localhost:1313/blog/install-gitlab-runner/"></a>
 </article>
 
@@ -160,10 +158,9 @@ Developer push branch baru ke remote repository. Developer melakukan merge beris
   <div class="entry-content">
     <p>Latar Belakang Masalah Sebelumnya, saya menggunakan Gitlab.com (Enterprise). Namun belum menggunakan versi berbayarnya. Jadi, ada banyak limitasi di sana-sini. Seperti limitasi jumlah member per project. Untuk itu, saya mencari solusi, dikarenakan perusahaan memiliki beberapa server, Gitlab Community Edition menjadi pilihan.
 Requirement 2.5 GB storage 8 vCPU 16 GB RAM Untuk lebih lengkapnya, silahkan kunjungi official page.
-Environment Untuk menginstall Gitlab Community Edition. Saya akan menggunakan docker. Untuk image docker tersebut, tersedia disini.
-...</p>
+Environment Untuk menginstall Gitlab Community Edition. Saya akan menggunakan docker. Untuk image docker tersebut, tersedia disini....</p>
   </div>
-  <footer class="entry-footer"><span title='2025-01-30 11:49:28 +0700 WIB'>January 30, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2025-01-30 11:49:28 +0700 +07'>January 30, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Install Gitlab Community Menggunakan Docker" href="http://localhost:1313/blog/install-gitlab-community/"></a>
 </article>
 
@@ -175,10 +172,9 @@ Environment Untuk menginstall Gitlab Community Edition. Saya akan menggunakan do
   <div class="entry-content">
     <p>Latar Belakang Masalah Adakalanya, karena beberapa masalah, jadi mengharuskan kita untuk memindahkan GitLab ke server lain. Jika ingin melihat garis besar cara backup dan restore GitLab, teman-teman bisa lihat dokumentasinya langsung di Overview Backup Restore Gitlab.
 Atau, jika ingin langsung praktik, bisa mengikuti Tutorial berikut pada artikel ini.
-Prerequisites GitLab harus memiliki versi yang sama. Asumsi bahwa GitLab sudah terinstall di kedua server menggunakan docker. Storage yang mencukupi, karena file backup GitLab cukup besar (2GB &#43;&#43;). Backup # Lokasi default file backup di /var/opt/gitlab/backups docker exec -t &lt;name of container&gt; gitlab-rake gitlab:backup:create # copy file hasil backup, dari container ke host machine docker cp &lt;name of container&gt;:/var/opt/gitlab/backups/&lt;name of backup&gt; . # backup file gitlab-secrets.json docker cp &lt;name of container&gt;:/etc/gitlab/gitlab-secrets.json . # backup file gitlab.rb docker cp &lt;name of container&gt;:/etc/gitlab/gitlab.rb . Kemudian, file hasil backup dijadikan satu kedalam sebuah folder, misalkan backup_dir. Lalu lakukan compress dengan command : tar -zcvf backup_dir.tar.gz backup_dir
-...</p>
+Prerequisites GitLab harus memiliki versi yang sama. Asumsi bahwa GitLab sudah terinstall di kedua server menggunakan docker. Storage yang mencukupi, karena file backup GitLab cukup besar (2GB &#43;&#43;)....</p>
   </div>
-  <footer class="entry-footer"><span title='2024-12-24 11:52:59 +0700 WIB'>December 24, 2024</span>&nbsp;·&nbsp;3 min</footer>
+  <footer class="entry-footer"><span title='2024-12-24 11:52:59 +0700 +07'>December 24, 2024</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to Backup dan Restore Gitlab Dengan Docker Pada Server Berbeda" href="http://localhost:1313/blog/backup-restore-gitlab/"></a>
 </article>
     </main>

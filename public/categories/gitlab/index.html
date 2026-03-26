@@ -100,7 +100,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
@@ -110,7 +110,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -134,10 +134,9 @@
 Jika belum dan ingin install GitLab self-hosted bisa lihat caranya disini.
 Jika ingin install GitLab Runner menggunakan docker bisa lihat caranya disini.
 Buat job sederhana Sekarang kita akan coba membuat job sederhana. Job yang dijalankan akan seperti ini:
-Job akan ke trigger jika ada perubahan di branch main. Job akan menjalankan stages build dan deploy. Job akan dijalankan di dalam docker. Membuat file .gitlab-ci.yml stages:- build- deploybuild:stage: buildimage: alpine:latestscript:- echo &#34;Starting build stages...&#34;- echo &#34;Running another command...&#34;deploy:stage: deployimage: alpine:latestscript:- echo &#34;Starting deploy stages...&#34;- echo &#34;Running another command...&#34;- echo &#34;job finished!&#34; Kemudian, save perubahan tersebut pada gitlab atau push perubahan tersebut ke gitlab pada branch main.
-...</p>
+Job akan ke trigger jika ada perubahan di branch main. Job akan menjalankan stages build dan deploy. Job akan dijalankan di dalam docker....</p>
   </div>
-  <footer class="entry-footer"><span title='2025-02-20 15:32:40 +0700 WIB'>February 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2025-02-20 15:32:40 +0700 +07'>February 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Konfigurasi Dasar CI/CD Gitlab" href="http://localhost:1313/blog/konfigurasi-dasar-cicd-gitlab/"></a>
 </article>
     </main>
