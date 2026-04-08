@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.135.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
@@ -101,7 +101,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span class="active">Home</span>
                 </a>
             </li>
@@ -111,7 +111,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -122,6 +122,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Relokasi Docker
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Latar Belakang Masalah Secara default, direktori docker terletak pada /var/lib/docker. Ada kalanya, ketika docker image , volume dan container sudah terlalu besar sehingga memakan storage. Kita ingin memindahkan letak direktori docker ini agar tidak memakan storage root kita yang pada akhirnya akan menghentikan service docker itu sendiri.
+Solusi Maka dari itu, kita perlu merelokasi direktori default docker ini ke partisi lain yang memiliki kapasitas lebih besar daripada partisi root.
+Persiapan stop semua docker yang sedang berjalan
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-29 18:41:16 +0700 +07'>August 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Relokasi Docker" href="http://localhost:1313/blog/relokasi-docker/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Override ir.model.access.csv
     </h2>
   </header>
@@ -129,10 +144,10 @@
     <p>Latar Belakang Masalah Biasanya, ketika kita meng-install module odoo dari third party, sudah otomatis ada pengaturan ir.model.access.csv bawaan modul tersebut. Ada kalanya, kita ingin menyesuaikan hak akses tersebut dengan kebutuhan di modul kustomisasi kita.
 Solusi Maka dari itu, kita perlu melakukan override hak akses yg ada di ir.model.access.csv.
 Override ir.model.access.csv Dibawah ini adalah contoh hak akses di ir.model.access.csv yang ingin kita override.
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink access_hr_holidays_status_manager,hr.holidays.status manager,model_hr_leave_type,hr_holidays.group_hr_holidays_manager,1,1,1,1 Untuk meng-override nya, silahkan buka file ir.model.access.csv di modul kustomisasi kalian dan ubah menjadi kira-kira seperti ini,
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlinkaccess_hr_holidays_status_manager,hr.holidays.status manager,model_hr_leave_type,hr_holidays.group_hr_holidays_manager,1,1,1,1 Untuk meng-override nya, silahkan buka file ir.model.access.csv di modul kustomisasi kalian dan ubah menjadi kira-kira seperti ini,
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-07-29 18:41:16 +0700 WIB'>July 29, 2024</span>&nbsp;·&nbsp;1 min</footer>
+  <footer class="entry-footer"><span title='2024-07-29 18:41:16 +0700 +07'>July 29, 2024</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to Override ir.model.access.csv" href="http://localhost:1313/blog/override-ir-model-access/"></a>
 </article>
 <footer class="page-footer">

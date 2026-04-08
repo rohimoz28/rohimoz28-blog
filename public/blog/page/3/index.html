@@ -126,6 +126,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Relokasi Docker
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Latar Belakang Masalah Secara default, direktori docker terletak pada /var/lib/docker. Ada kalanya, ketika docker image , volume dan container sudah terlalu besar sehingga memakan storage. Kita ingin memindahkan letak direktori docker ini agar tidak memakan storage root kita yang pada akhirnya akan menghentikan service docker itu sendiri.
+Solusi Maka dari itu, kita perlu merelokasi direktori default docker ini ke partisi lain yang memiliki kapasitas lebih besar daripada partisi root.
+Persiapan stop semua docker yang sedang berjalan...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-29 18:41:16 +0700 +07'>August 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Relokasi Docker" href="http://localhost:1313/blog/relokasi-docker/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Override ir.model.access.csv
     </h2>
   </header>

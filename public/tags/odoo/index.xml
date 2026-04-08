@@ -6,8 +6,15 @@
     <description>Recent content in Odoo on Rohimoz28</description>
     <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Mar 2026 23:07:42 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2026 13:51:58 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/odoo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Formatter Odoo</title>
+      <link>http://localhost:1313/blog/setup-formatter-odoo/</link>
+      <pubDate>Thu, 26 Mar 2026 13:51:58 +0700</pubDate>
+      <guid>http://localhost:1313/blog/setup-formatter-odoo/</guid>
+      <description>Tutorial Setup Formatter untuk Odoo di VSCode dan PyCharm</description>
+    </item>
     <item>
       <title>Implementasi CI/CD menggunakan GitLab &amp; GitLab Runner Untuk Project Odoo</title>
       <link>http://localhost:1313/blog/gitlab-cicd/</link>

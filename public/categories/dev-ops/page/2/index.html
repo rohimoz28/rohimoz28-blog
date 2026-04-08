@@ -100,7 +100,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Rohimoz28">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
@@ -110,7 +110,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -126,28 +126,13 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Backup dan Restore Gitlab Dengan Docker Pada Server Berbeda
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Latar Belakang Masalah Adakalanya, karena beberapa masalah, jadi mengharuskan kita untuk memindahkan GitLab ke server lain. Jika ingin melihat garis besar cara backup dan restore GitLab, teman-teman bisa lihat dokumentasinya langsung di Overview Backup Restore Gitlab.
-Atau, jika ingin langsung praktik, bisa mengikuti Tutorial berikut pada artikel ini.
-Prerequisites GitLab harus memiliki versi yang sama. Asumsi bahwa GitLab sudah terinstall di kedua server menggunakan docker. Storage yang mencukupi, karena file backup GitLab cukup besar (2GB &#43;&#43;). Backup # Lokasi default file backup di /var/opt/gitlab/backups docker exec -t &lt;name of container&gt; gitlab-rake gitlab:backup:create # copy file hasil backup, dari container ke host machine docker cp &lt;name of container&gt;:/var/opt/gitlab/backups/&lt;name of backup&gt; . # backup file gitlab-secrets.json docker cp &lt;name of container&gt;:/etc/gitlab/gitlab-secrets.json . # backup file gitlab.rb docker cp &lt;name of container&gt;:/etc/gitlab/gitlab.rb . Kemudian, file hasil backup dijadikan satu kedalam sebuah folder, misalkan backup_dir. Lalu lakukan compress dengan command : tar -zcvf backup_dir.tar.gz backup_dir
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-12-24 11:52:59 +0700 WIB'>December 24, 2024</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to Backup dan Restore Gitlab Dengan Docker Pada Server Berbeda" href="http://localhost:1313/blog/backup-restore-gitlab/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">Docker Multi Instance Odoo
     </h2>
   </header>
   <div class="entry-content">
     <p>A brief step of installing odoo multi instance</p>
   </div>
-  <footer class="entry-footer"><span title='2024-09-29 19:03:00 +0700 WIB'>September 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2024-09-29 19:03:00 +0700 +07'>September 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Docker Multi Instance Odoo" href="http://localhost:1313/blog/install-multi-odoo-instance-menggunakan-docker/"></a>
 </article>
 
@@ -162,7 +147,7 @@ Solusi Maka dari itu, kita perlu merelokasi direktori default docker ini ke part
 Persiapan stop semua docker yang sedang berjalan
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-08-29 18:41:16 +0700 WIB'>August 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2024-08-29 18:41:16 +0700 +07'>August 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Relokasi Docker" href="http://localhost:1313/blog/relokasi-docker/"></a>
 </article>
 <footer class="page-footer">

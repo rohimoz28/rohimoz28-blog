@@ -13,9 +13,7 @@
       <link>http://localhost:1313/blog/setup-formatter-odoo/</link>
       <pubDate>Thu, 26 Mar 2026 13:51:58 +0700</pubDate>
       <guid>http://localhost:1313/blog/setup-formatter-odoo/</guid>
-      <description>Standarisasi Code Formatting Python dengan Black, isort, dan Flake8 Setup lengkap untuk VSCode dan PyCharm pada project Odoo v17
-Overview Ketika tim developer bekerja pada codebase yang sama, perbedaan gaya penulisan kode antar individu dapat menjadi sumber noise yang tidak perlu — mulai dari perbedaan indentasi, urutan import, hingga panjang baris kode. Hal ini membuat code review menjadi lebih sulit dan git diff menjadi lebih berisik.
-Solusinya adalah menggunakan code formatter dan linter yang dijalankan secara konsisten di semua environment developer.</description>
+      <description>Tutorial Setup Formatter untuk Odoo di VSCode dan PyCharm</description>
     </item>
   </channel>
 </rss>
