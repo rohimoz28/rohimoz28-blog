@@ -2,39 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Gitlab on Rohimoz28</title>
-    <link>http://localhost:1313/tags/gitlab/</link>
+    <link>http://localhost:1314/tags/gitlab/</link>
     <description>Recent content in Gitlab on Rohimoz28</description>
     <generator>Hugo -- 0.126.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Mar 2026 23:07:42 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Apr 2026 16:04:14 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1314/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technical Blog Backup Orchestrator</title>
+      <link>http://localhost:1314/blog/technical-blog-backup-orchestrator/</link>
+      <pubDate>Wed, 08 Apr 2026 16:04:14 +0700</pubDate>
+      <guid>http://localhost:1314/blog/technical-blog-backup-orchestrator/</guid>
+      <description>Membangun Backup Orchestrator Multi-Node dengan GitLab CI: Pendekatan Hybrid SSH dan Shell Executor TL;DR GitLab CI jadi control plane tunggal untuk backup multi-node dengan workflow terstandar, observable, dan aman.
+Latar Belakang Masalah Saat jumlah server bertambah, backup sering berubah jadi proses manual yang rapuh:
+Schedule tersebar di banyak host dan sulit diaudit. Proses backup antar server tidak konsisten (nama file, retention, logging). Kredensial rawan tercecer karena tersimpan lokal di script host.</description>
+    </item>
     <item>
       <title>Implementasi CI/CD menggunakan GitLab &amp; GitLab Runner Untuk Project Odoo</title>
-      <link>http://localhost:1313/blog/gitlab-cicd/</link>
+      <link>http://localhost:1314/blog/gitlab-cicd/</link>
       <pubDate>Sat, 07 Mar 2026 23:07:42 +0700</pubDate>
-      <guid>http://localhost:1313/blog/gitlab-cicd/</guid>
+      <guid>http://localhost:1314/blog/gitlab-cicd/</guid>
       <description>Membangun CI/CD Pipeline untuk Odoo dengan GitLab dan Shell Executor Panduan konseptual membangun pipeline deployment otomatis yang aman, ringan, dan efisien untuk aplikasi Odoo berbasis Docker.
 Pendahuluan: Masalah yang Diselesaikan Dalam lingkungan pengembangan yang aktif, proses deployment manual adalah sumber masalah yang konsisten. Developer harus masuk ke server, menarik kode terbaru, lalu merestart container secara manual — sebuah rutinitas yang memakan waktu, rawan human error, dan tidak terdokumentasi dengan baik.</description>
     </item>
     <item>
       <title>Install Gitlab Runner</title>
-      <link>http://localhost:1313/blog/install-gitlab-runner/</link>
+      <link>http://localhost:1314/blog/install-gitlab-runner/</link>
       <pubDate>Mon, 10 Feb 2025 08:38:29 +0700</pubDate>
-      <guid>http://localhost:1313/blog/install-gitlab-runner/</guid>
+      <guid>http://localhost:1314/blog/install-gitlab-runner/</guid>
       <description>Untuk menggunakan CI/CD pada gitlab, ada beberapa aplikasi untuk mendukung hal tersebut. Tapi, GitLab Runner adalah yang paling kompatibel dengan GitLab Community.</description>
     </item>
     <item>
       <title>Install Gitlab Community Menggunakan Docker</title>
-      <link>http://localhost:1313/blog/install-gitlab-community/</link>
+      <link>http://localhost:1314/blog/install-gitlab-community/</link>
       <pubDate>Thu, 30 Jan 2025 11:49:28 +0700</pubDate>
-      <guid>http://localhost:1313/blog/install-gitlab-community/</guid>
+      <guid>http://localhost:1314/blog/install-gitlab-community/</guid>
       <description>Dengan beberapa alasan, adakalanya kita ingin memiliki Gitlab yang terinstall pada server yang kita kelola sendiri.</description>
     </item>
     <item>
       <title>Backup dan Restore Gitlab Dengan Docker Pada Server Berbeda</title>
-      <link>http://localhost:1313/blog/backup-restore-gitlab/</link>
+      <link>http://localhost:1314/blog/backup-restore-gitlab/</link>
       <pubDate>Tue, 24 Dec 2024 11:52:59 +0700</pubDate>
-      <guid>http://localhost:1313/blog/backup-restore-gitlab/</guid>
+      <guid>http://localhost:1314/blog/backup-restore-gitlab/</guid>
       <description>Implementasi Backup dan Restore GitLab menggunakan Docker Pada Server Berbeda</description>
     </item>
   </channel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Devops on Rohimoz28</title>
+    <link>http://localhost:1314/tags/devops/</link>
+    <description>Recent content in Devops on Rohimoz28</description>
+    <generator>Hugo -- 0.126.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Apr 2026 16:04:14 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1314/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technical Blog Backup Orchestrator</title>
+      <link>http://localhost:1314/blog/technical-blog-backup-orchestrator/</link>
+      <pubDate>Wed, 08 Apr 2026 16:04:14 +0700</pubDate>
+      <guid>http://localhost:1314/blog/technical-blog-backup-orchestrator/</guid>
+      <description>Membangun Backup Orchestrator Multi-Node dengan GitLab CI: Pendekatan Hybrid SSH dan Shell Executor TL;DR GitLab CI jadi control plane tunggal untuk backup multi-node dengan workflow terstandar, observable, dan aman.
+Latar Belakang Masalah Saat jumlah server bertambah, backup sering berubah jadi proses manual yang rapuh:
+Schedule tersebar di banyak host dan sulit diaudit. Proses backup antar server tidak konsisten (nama file, retention, logging). Kredensial rawan tercecer karena tersimpan lokal di script host.</description>
+    </item>
+  </channel>
+</rss>

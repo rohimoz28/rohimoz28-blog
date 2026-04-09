@@ -1,0 +1,38 @@
+@startuml
+
+title Simple Backup Orchestrator Flow
+autonumber
+
+actor "Scheduler / Manual Trigger" as Trigger
+participant "GitLab CI" as CI
+participant "Runner" as R
+participant "Node A" as A
+participant "Node B" as B
+participant "Node C" as C
+participant "GitLab Job Log" as JL
+participant "Grafana / Loki" as G
+
+Trigger -> CI: Trigger pipeline
+CI -> R: Start backup job
+R -> R: Evaluate BACKUP flags
+
+par Node A
+  R -> A: Run backup script (SSH/local)
+  A -> A: Backup + retention
+  A --> R: Log output (stdout/json)
+else Node B
+  R -> B: Run backup script (SSH/local)
+  B -> B: Backup + retention
+  B --> R: Log output (stdout/json)
+else Node C
+  R -> C: Run backup script (SSH/local)
+  C -> C: Backup + retention
+  C --> R: Log output (stdout/json)
+end
+
+alt Log ke GitLab job log
+  R -> JL: Stream stdout
+else Log terstruktur ke observability stack
+  R -> G: Send json log
+end
+@enduml
