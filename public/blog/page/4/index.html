@@ -100,7 +100,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Home">
+                <a href="http://localhost:1313/" title="Rohimoz28">
                     <span>Home</span>
                 </a>
             </li>
@@ -110,7 +110,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="About">
+                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
                     <span>About</span>
                 </a>
             </li>
@@ -126,6 +126,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Cara Debug Odoo Di Docker Menggunakan Pdb
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Latar Belakang Masalah Untuk melakukan debugging di odoo, ada beberapa cara. Yang paling direkomendasikan adalah menggunakan python package pdb. Sayangnya, ketika develop Odoo menggunakan docker. Perlu ada konfigurasi khusus agar kita bisa menggunakan package tersebut.
+Dalam praktik kali ini saya mengasumsikan teman-teman sudah menginstall odoo menggunakan docker. Kali ini, kita akan menggunakan VSCode sebagai text editor.
+Ada dua cara untuk melakukan debugging saat develop menggunakan docker.
+1. Menggunakan Metode Attach Container Baik digunakan di local development environment. Karena tidak akan mengganggu STDIN dari program dan bisa melalui remote debugging. Tambahkan kedua line dibawah ini pada pengaturan docker-compose.yaml.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-16 13:27:39 +0700 WIB'>December 16, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Cara Debug Odoo Di Docker Menggunakan Pdb" href="http://localhost:1313/blog/cara-debug-odoo-di-docker-menggunakan-pdb/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Membuat Notifikasi Menggunakan Webhook Discord
     </h2>
   </header>
@@ -134,7 +150,7 @@
 Keuntungan Menggunakan Webhook Real-Time: Webhook memungkinkan komunikasi yang cepat dan real-time antara aplikasi atau sistem. Efisien: Daripada aplikasi penerima harus secara terus-menerus memeriksa data (polling), webhook hanya mengirimkan data ketika terjadi perubahan, sehingga lebih efisien dalam hal penggunaan sumber daya. Automatisasi: Webhook dapat digunakan untuk mengotomatisasi alur kerja atau tindakan berdasarkan event yang terjadi, seperti mengirimkan pemberitahuan, memperbarui database, atau menjalankan skrip otomatis. Latar Belakang Masalah Ketika melakukan event mengeksekusi di server menggunakan script .sh perlu ada mekanisme mengirim notifikasi ketika ada error dalam proses tersebut. Ada banyak pilihan, tapi disini saya memilih untuk menggunakan Webhook Discord.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-12-14 12:26:32 +0700 +07'>December 14, 2024</span>&nbsp;·&nbsp;3 min</footer>
+  <footer class="entry-footer"><span title='2024-12-14 12:26:32 +0700 WIB'>December 14, 2024</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to Membuat Notifikasi Menggunakan Webhook Discord" href="http://localhost:1313/blog/membuat-notifikasi-menggunakan-webhook-discord/"></a>
 </article>
 
@@ -152,7 +168,7 @@ Keuntungan Menggunakan Webhook Real-Time: Webhook memungkinkan komunikasi yang c
   <div class="entry-content">
     <p> &lt;record id=&#34;ir_cron_populate_leave_allocation&#34; model=&#34;ir.cron&#34;&gt; &lt;field name=&#34;name&#34;&gt;HR Leave Allocation: Populate Leave Allocation&lt;/field&gt; &lt;field name=&#34;model_id&#34; ref=&#34;model_sb_leave_allocation&#34;/&gt; &lt;field name=&#34;state&#34;&gt;code&lt;/field&gt; &lt;field name=&#34;code&#34;&gt;model._cron_populate_leave_alloc()&lt;/field&gt; &lt;field name=&#34;user_id&#34; ref=&#34;base.user_root&#34;/&gt; &lt;field name=&#34;interval_number&#34;&gt;1&lt;/field&gt; &lt;field name=&#34;interval_type&#34;&gt;days&lt;/field&gt; &lt;field name=&#34;numbercall&#34;&gt;-1&lt;/field&gt; &lt;field name=&#34;nextcall&#34; eval=&#34;(DateTime.utcnow() &#43; timedelta(days=1)).replace(hour=18, minute=0, second=0, microsecond=0).strftime(&#39;%Y-%m-%d %H:%M:%S&#39;)&#34;/&gt; &lt;field eval=&#34;False&#34; name=&#34;doall&#34;/&gt; &lt;/record&gt; import logging def _cron_populate_leave_alloc(self): self.env.cr.execute(&#34;CALL procedure_leave_alloc()&#34;) self.env.cr.commit() _logger = logging.getLogger(__name__) _logger.info(&#34;Cron For Populate Leave Allocation is Running Successfully&#34;) </p>
   </div>
-  <footer class="entry-footer"><span title='2024-12-02 22:03:36 +0700 +07'>December 2, 2024</span>&nbsp;·&nbsp;1 min</footer>
+  <footer class="entry-footer"><span title='2024-12-02 22:03:36 +0700 WIB'>December 2, 2024</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to Odoo Scheduled Actions" href="http://localhost:1313/blog/odoo-scheduled-actions/"></a>
 </article>
 
@@ -168,7 +184,7 @@ Untuk itu, diperlukan suatu cara untuk mensinkronkan query sql yang di kerjakan 
 Buat Folder db Pertama, kita buat folder baru didalam modul kustom kita dengan nama db. Yang nantinya akan menjadi tempat kita meletakkan file berformat .sql.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-11-26 18:41:16 +0700 +07'>November 26, 2024</span>&nbsp;·&nbsp;1 min</footer>
+  <footer class="entry-footer"><span title='2024-11-26 18:41:16 +0700 WIB'>November 26, 2024</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to Cara Menyimpan Query SQL Pada Modul Odoo" href="http://localhost:1313/blog/cara-menyimpan-query-sql-pada-module-odoo/"></a>
 </article>
 
@@ -180,22 +196,8 @@ Buat Folder db Pertama, kita buat folder baru didalam modul kustom kita dengan n
   <div class="entry-content">
     <p>A brief step of installing odoo multi instance</p>
   </div>
-  <footer class="entry-footer"><span title='2024-09-29 19:03:00 +0700 +07'>September 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2024-09-29 19:03:00 +0700 WIB'>September 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Docker Multi Instance Odoo" href="http://localhost:1313/blog/install-multi-odoo-instance-menggunakan-docker/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Odoo 17 Menggunakan Docker
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Tulisan ini akan menunjukkan cara meng-install Odoo dan Postgresql menggunakan Docker. Sebelum mengikuti tutorial ini, penulis asumsikan bahwa kamu sudah meng-install Docker di sistem operasi kalian. Jika belum, silahkan ikuti Tutorial Install Docker dari laman resminya.
-Untuk tuorial kali ini, akan menggunakan source code dari repository github saya. Silahkan di fork atau di clone di lokal kalian.
-Struktur Folder Masuk ke folder yang baru di clone, maka kalian akan menemukan 2 folder. conf customize. Struktur folder kalian akan tampak seperti ini: ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-09-29 18:41:16 +0700 +07'>September 29, 2024</span>&nbsp;·&nbsp;5 min</footer>
-  <a class="entry-link" aria-label="post link to Install Odoo 17 Menggunakan Docker" href="http://localhost:1313/blog/install-odoo-menggunakan-docker/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

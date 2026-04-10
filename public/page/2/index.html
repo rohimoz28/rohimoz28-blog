@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.126.3"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
@@ -10,17 +10,17 @@
 
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1314/">
+<link rel="canonical" href="http://localhost:1313/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1314/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1314/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1314/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1314/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1314/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1314/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1314/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
 <noscript>
     <style>
         #theme-toggle,
@@ -75,7 +75,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1314/" accesskey="h" title="Rohimoz28 (Alt + H)">Rohimoz28</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Rohimoz28 (Alt + H)">Rohimoz28</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -101,17 +101,17 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1314/" title="Home">
+                <a href="http://localhost:1313/" title="Rohimoz28">
                     <span class="active">Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1314/archives/" title="Archives">
+                <a href="http://localhost:1313/archives/" title="Archives">
                     <span>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1314/about/" title="About">
+                <a href="http://localhost:1313/about/" title="Tentang Blog &amp; Saya">
                     <span>About</span>
                 </a>
             </li>
@@ -122,160 +122,92 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Konfigurasi Dasar CI/CD Gitlab
+    <h2 class="entry-hint-parent">PostgreSQL Replication
     </h2>
   </header>
   <div class="entry-content">
-    <p>Persyaratan Saya menggunakan Gilab self-hosted dan gitlab-runner yang di install menggunakan docker.
-Jika belum dan ingin install GitLab self-hosted bisa lihat caranya disini.
-Jika ingin install GitLab Runner menggunakan docker bisa lihat caranya disini.
-Buat job sederhana Sekarang kita akan coba membuat job sederhana. Job yang dijalankan akan seperti ini:
-Job akan ke trigger jika ada perubahan di branch main. Job akan menjalankan stages build dan deploy. Job akan dijalankan di dalam docker....</p>
+    <p>PostgreSQL Replication Kalo kamu membaca artikel ini, artinya kamu sudah menganggap replikasi database adalah sesuatu yang krusial. Beruntung, PostgreSQL secara default mendukung replikasi dengan streaming data Asynchronous dan Synchronous.
+Asynchronous &amp; Synchronous PostgreSQL mendukung 2 jenis streaming data pada proses replikasi. Async dan Sync.
+Asynchronous Replication Pada replikasi Asinkron, commit transaksi di server Primary dikonfirmasi berhasil ke klien segera setelah data Write-Ahead Log (WAL) ditulis ke disk Primary.
+Server Primary TIDAK menunggu konfirmasi apa pun dari server Standby bahwa mereka telah menerima atau memproses WAL tersebut.
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-02-20 15:32:40 +0700 +07'>February 20, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Konfigurasi Dasar CI/CD Gitlab" href="http://localhost:1314/blog/konfigurasi-dasar-cicd-gitlab/"></a>
+  <footer class="entry-footer"><span title='2025-11-14 14:09:18 +0700 WIB'>November 14, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to PostgreSQL Replication" href="http://localhost:1313/blog/postgresql-replikasi-async/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Gitlab Runner
+    <h2 class="entry-hint-parent">Git Stash - Part 2
     </h2>
   </header>
   <div class="entry-content">
-    <p>Latar Belakang Masalah Dalam proses deployment fitur ke user. Biasanya, ketika developer sudah menyelesaikan suatu fitur, maka terlebih dahulu akan melakukan push source code fitur ke repository (misal: GitLab). Setelahnya, perubahan terbaru dari repository akan di pull di server untuk selanjutnya dilakukan pengetesan dan lainnya. Kira - kira alur kerjanya akan seperti ini:
-Developer push branch baru ke remote repository. Developer melakukan merge berisi source code fitur baru ke branch development/staging/production....</p>
+    <p>Git Stash Pro Tips Artikel ini adalah lanjutan dari artikel Git Stash - Part 1.
+Pada artikel ini, kita akan coba menggunakan Stash seperti seorang pro.
+Menyimpan Stash Dengan Pesan git stash push -m &#34;pesan_commit_untuk_stash&#34; yang nantinya bisa dijadikan referensi task yang belum selesai. Lalu ketika kita cek list index stash maka akan muncul sebagai berikut, Menampilkan Konten Stash Jikalau kita ingin melihat konten dari stash, kita bisa gunakan command git stash show -p &lt;index_stash&gt;. ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-02-10 08:38:29 +0700 +07'>February 10, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Install Gitlab Runner" href="http://localhost:1314/blog/install-gitlab-runner/"></a>
+  <footer class="entry-footer"><span title='2025-07-06 20:04:51 +0700 WIB'>July 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Git Stash - Part 2" href="http://localhost:1313/blog/git-stash-2/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Install Gitlab Community Menggunakan Docker
+    <h2 class="entry-hint-parent">Git Stash - Part 1
     </h2>
   </header>
   <div class="entry-content">
-    <p>Latar Belakang Masalah Sebelumnya, saya menggunakan Gitlab.com (Enterprise). Namun belum menggunakan versi berbayarnya. Jadi, ada banyak limitasi di sana-sini. Seperti limitasi jumlah member per project. Untuk itu, saya mencari solusi, dikarenakan perusahaan memiliki beberapa server, Gitlab Community Edition menjadi pilihan.
-Requirement 2.5 GB storage 8 vCPU 16 GB RAM Untuk lebih lengkapnya, silahkan kunjungi official page.
-Environment Untuk menginstall Gitlab Community Edition. Saya akan menggunakan docker. Untuk image docker tersebut, tersedia disini....</p>
+    <p>Latar Belakang Ketika seorang developer sedang mengerjakan sebuah fitur lalu ditengah-tengah pekerjaan yang belum selesai, developer terpaksa atau dipaksa untuk meninggalkan pekerjaan yang belum selesai di branch tersebut, untuk pindah ke branch lain.
+Biasanya dikarenakan ada pekerjaan lain yang lebih urgent untuk diselesaikan yang menuntut developer untuk checkout atau pindah dari branch yang sedang di develop.
+Pada waktu tersebut, biasanya developer malas atau enggan untuk membuat commit dari pekerjaan yang belum selesai. Namun ingin tetap memisahkan pekerjaan yang belum selesai dengan pekerjaan yang baru.
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-01-30 11:49:28 +0700 +07'>January 30, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Install Gitlab Community Menggunakan Docker" href="http://localhost:1314/blog/install-gitlab-community/"></a>
+  <footer class="entry-footer"><span title='2025-07-06 18:32:24 +0700 WIB'>July 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Git Stash - Part 1" href="http://localhost:1313/blog/git-stash-1/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Cara Backup Odoo Dan Postgresql
+    <h2 class="entry-hint-parent">Shell Script Untuk Backup Otomatis
     </h2>
   </header>
   <div class="entry-content">
-    <p>Latar Belakang Masalah Biasanya, kita dapat melakuakn backup odoo berikut database nya melalui front end aplikasi. Tapi, ketika ukuran database sudah besar (file compress &gt; 2GB) akan timbul masalah gagal backup. Biasanya karena faktor koneksi internet yang tidak stabil.
-Environment Dalam contoh kasus kali ini, penulis menggunakan Odoo dan Postgresql yang dijalankan menggunakan docker. Pada umumnya, cara yang diguanakan jika tidak memnggunakan docker adalah sama. Hanya beda syntax.
-Solusi Untuk latar belakang masalah yang dikemukakan diatas, perlu mekanisme backup lain untuk mengakomodasi database Odoo yang tidak bisa di backup dari front end....</p>
+    <p>Latar Belakang Masalah Sebagai seorang programmer Odoo, kita wajib untuk melakukan backup rutin aplikasi. Aplikasi Odoo bisa di backup melalui frontend. Namun, ketika harus dilakukan rutin, adakalanya saya lupa untuk melakukan backup. Dikarenakan load pekerjaan yang sedang banyak, atau memang lupa saja :)
+Maka dari itu, diperlukan suatu mekanisme backup otomatis. Dan ketika proses backup selesai, entah itu berhasil atau gagal, maka akan mengirimkan notifikasi melalui webhook discord.
+Namun, kali ini, saya hanya akan melakukan backup terhadap database-nya saja. Dikarenakan untuk kebutuhannya hanya diperlukan backup transaksi selama 7 hari terakhir.
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-01-25 19:55:30 +0700 +07'>January 25, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Cara Backup Odoo Dan Postgresql" href="http://localhost:1314/blog/cara-manual-backup-odoo/"></a>
+  <footer class="entry-footer"><span title='2025-03-28 17:50:54 +0700 WIB'>March 28, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to Shell Script Untuk Backup Otomatis" href="http://localhost:1313/blog/shell-script-untuk-backup-otomatis/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Backup dan Restore Gitlab Dengan Docker Pada Server Berbeda
+    <h2 class="entry-hint-parent">Cara Koneksi SSH Tanpa Password
     </h2>
   </header>
   <div class="entry-content">
-    <p>Latar Belakang Masalah Adakalanya, karena beberapa masalah, jadi mengharuskan kita untuk memindahkan GitLab ke server lain. Jika ingin melihat garis besar cara backup dan restore GitLab, teman-teman bisa lihat dokumentasinya langsung di Overview Backup Restore Gitlab.
-Atau, jika ingin langsung praktik, bisa mengikuti Tutorial berikut pada artikel ini.
-Prerequisites GitLab harus memiliki versi yang sama. Asumsi bahwa GitLab sudah terinstall di kedua server menggunakan docker. Storage yang mencukupi, karena file backup GitLab cukup besar (2GB &#43;&#43;)....</p>
+    <p>Latar Belakang Masalah Akan datang saatnya ketika kita perlu membuat koneksi dari server A ke server B menggunakan SSH. Namun,
+kita sebal atau memang mengganggu proses otamasi karena harus selalu input password ketika login menggunakan SSH.
+Tujuan Kita akan coba melakukan login menggunakan SSH ke server lain tanpa harus input password.
+Store SSH pada Authorized Keys Intinya, di server A itu harus punya kartu pass milik server B!
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-12-24 11:52:59 +0700 +07'>December 24, 2024</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to Backup dan Restore Gitlab Dengan Docker Pada Server Berbeda" href="http://localhost:1314/blog/backup-restore-gitlab/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Cara Debug Odoo Di Docker Menggunakan Pdb
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Latar Belakang Masalah Untuk melakukan debugging di odoo, ada beberapa cara. Yang paling direkomendasikan adalah menggunakan python package pdb. Sayangnya, ketika develop Odoo menggunakan docker. Perlu ada konfigurasi khusus agar kita bisa menggunakan package tersebut.
-Dalam praktik kali ini saya mengasumsikan teman-teman sudah menginstall odoo menggunakan docker. Kali ini, kita akan menggunakan VSCode sebagai text editor.
-Ada dua cara untuk melakukan debugging saat develop menggunakan docker.
-1. Menggunakan Metode Attach Container Baik digunakan di local development environment....</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-12-16 13:27:39 +0700 +07'>December 16, 2024</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Cara Debug Odoo Di Docker Menggunakan Pdb" href="http://localhost:1314/blog/cara-debug-odoo-di-docker-menggunakan-pdb/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Membuat Notifikasi Menggunakan Webhook Discord
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Webhook Webhook adalah sebuah metode untuk memungkinkan aplikasi atau layanan berkomunikasi satu sama lain secara otomatis melalui HTTP request. Secara sederhana, webhook adalah cara bagi satu aplikasi untuk memberi tahu aplikasi lain tentang suatu kejadian (event) atau peristiwa yang terjadi secara real-time.
-Keuntungan Menggunakan Webhook Real-Time: Webhook memungkinkan komunikasi yang cepat dan real-time antara aplikasi atau sistem. Efisien: Daripada aplikasi penerima harus secara terus-menerus memeriksa data (polling), webhook hanya mengirimkan data ketika terjadi perubahan, sehingga lebih efisien dalam hal penggunaan sumber daya....</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-12-14 12:26:32 +0700 +07'>December 14, 2024</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to Membuat Notifikasi Menggunakan Webhook Discord" href="http://localhost:1314/blog/membuat-notifikasi-menggunakan-webhook-discord/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Odoo Scheduled Actions
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> &lt;record id=&#34;ir_cron_populate_leave_allocation&#34; model=&#34;ir.cron&#34;&gt; &lt;field name=&#34;name&#34;&gt;HR Leave Allocation: Populate Leave Allocation&lt;/field&gt; &lt;field name=&#34;model_id&#34; ref=&#34;model_sb_leave_allocation&#34;/&gt; &lt;field name=&#34;state&#34;&gt;code&lt;/field&gt; &lt;field name=&#34;code&#34;&gt;model._cron_populate_leave_alloc()&lt;/field&gt; &lt;field name=&#34;user_id&#34; ref=&#34;base.user_root&#34;/&gt; &lt;field name=&#34;interval_number&#34;&gt;1&lt;/field&gt; &lt;field name=&#34;interval_type&#34;&gt;days&lt;/field&gt; &lt;field name=&#34;numbercall&#34;&gt;-1&lt;/field&gt; &lt;field name=&#34;nextcall&#34; eval=&#34;(DateTime.utcnow() &#43; timedelta(days=1)).replace(hour=18, minute=0, second=0, microsecond=0).strftime(&#39;%Y-%m-%d %H:%M:%S&#39;)&#34;/&gt; &lt;field eval=&#34;False&#34; name=&#34;doall&#34;/&gt; &lt;/record&gt; import logging def _cron_populate_leave_alloc(self): self.env.cr.execute(&#34;CALL procedure_leave_alloc()&#34;) self.env.cr.commit() _logger = logging.getLogger(__name__) _logger.info(&#34;Cron For Populate Leave Allocation is Running Successfully&#34;) </p>
-  </div>
-  <footer class="entry-footer"><span title='2024-12-02 22:03:36 +0700 +07'>December 2, 2024</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to Odoo Scheduled Actions" href="http://localhost:1314/blog/odoo-scheduled-actions/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Cara Menyimpan Query SQL Pada Modul Odoo
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Masalahnya, praktik meletakkan query procedure PostgreSQL langsung di database lalu memanggilnya dengan function execute di kode python merupakan hal yang buruk ketika procedure tersebut dikerjakan oleh beberapa orang.
-Sayangnya, ketika banyak orang mengerjakan query procedure langsung di database, bisa mengakibatkan inkonsistensi kode.
-Untuk itu, diperlukan suatu cara untuk mensinkronkan query sql yang di kerjakan di dalam team.
-Buat Folder db Pertama, kita buat folder baru didalam modul kustom kita dengan nama db....</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-11-26 18:41:16 +0700 +07'>November 26, 2024</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to Cara Menyimpan Query SQL Pada Modul Odoo" href="http://localhost:1314/blog/cara-menyimpan-query-sql-pada-module-odoo/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Docker Multi Instance Odoo
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>A brief step of installing odoo multi instance</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-09-29 19:03:00 +0700 +07'>September 29, 2024</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Docker Multi Instance Odoo" href="http://localhost:1314/blog/install-multi-odoo-instance-menggunakan-docker/"></a>
+  <footer class="entry-footer"><span title='2025-03-07 21:13:39 +0700 WIB'>March 7, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to Cara Koneksi SSH Tanpa Password" href="http://localhost:1313/blog/cara-koneksi-ssh-tanpa-password/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
-    <a class="prev" href="http://localhost:1314/">
+    <a class="prev" href="http://localhost:1313/">
       «&nbsp;Prev&nbsp;
     </a>
-    <a class="next" href="http://localhost:1314/page/3/">Next&nbsp;&nbsp;»
+    <a class="next" href="http://localhost:1313/page/3/">Next&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1314/">Rohimoz28</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Rohimoz28</a></span> · 
 
     <span>
         Powered by

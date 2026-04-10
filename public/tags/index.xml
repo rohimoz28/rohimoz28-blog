@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Rohimoz28</title>
-    <link>http://localhost:1314/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Rohimoz28</description>
-    <generator>Hugo -- 0.126.3</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Apr 2026 16:04:14 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1314/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cicd</title>
-      <link>http://localhost:1314/tags/cicd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/cicd/</guid>
+      <link>http://localhost:1313/tags/cicd/</link>
+      <pubDate>Wed, 08 Apr 2026 16:04:14 +0700</pubDate>
+      <guid>http://localhost:1313/tags/cicd/</guid>
       <description></description>
     </item>
     <item>
       <title>Devops</title>
-      <link>http://localhost:1314/tags/devops/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/devops/</guid>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Wed, 08 Apr 2026 16:04:14 +0700</pubDate>
+      <guid>http://localhost:1313/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Gitlab</title>
-      <link>http://localhost:1314/tags/gitlab/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/gitlab/</guid>
+      <link>http://localhost:1313/tags/gitlab/</link>
+      <pubDate>Wed, 08 Apr 2026 16:04:14 +0700</pubDate>
+      <guid>http://localhost:1313/tags/gitlab/</guid>
       <description></description>
     </item>
     <item>
       <title>Odoo</title>
-      <link>http://localhost:1314/tags/odoo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/odoo/</guid>
+      <link>http://localhost:1313/tags/odoo/</link>
+      <pubDate>Thu, 26 Mar 2026 13:51:58 +0700</pubDate>
+      <guid>http://localhost:1313/tags/odoo/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1314/tags/python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/python/</guid>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Thu, 26 Mar 2026 13:51:58 +0700</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Database</title>
-      <link>http://localhost:1314/tags/database/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/database/</guid>
+      <link>http://localhost:1313/tags/database/</link>
+      <pubDate>Tue, 24 Mar 2026 13:43:16 +0700</pubDate>
+      <guid>http://localhost:1313/tags/database/</guid>
       <description></description>
     </item>
     <item>
       <title>Postgresql</title>
-      <link>http://localhost:1314/tags/postgresql/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/postgresql/</guid>
+      <link>http://localhost:1313/tags/postgresql/</link>
+      <pubDate>Tue, 24 Mar 2026 13:43:16 +0700</pubDate>
+      <guid>http://localhost:1313/tags/postgresql/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://localhost:1314/tags/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/docker/</guid>
+      <link>http://localhost:1313/tags/docker/</link>
+      <pubDate>Tue, 24 Mar 2026 13:30:51 +0700</pubDate>
+      <guid>http://localhost:1313/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>http://localhost:1314/tags/git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/git/</guid>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Sun, 06 Jul 2025 20:04:51 +0700</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1314/tags/linux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/linux/</guid>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Fri, 07 Mar 2025 21:13:39 +0700</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Webhook</title>
-      <link>http://localhost:1314/tags/webhook/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/webhook/</guid>
+      <link>http://localhost:1313/tags/webhook/</link>
+      <pubDate>Sat, 14 Dec 2024 12:26:32 +0700</pubDate>
+      <guid>http://localhost:1313/tags/webhook/</guid>
       <description></description>
     </item>
   </channel>

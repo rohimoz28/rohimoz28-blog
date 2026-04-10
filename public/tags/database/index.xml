@@ -2,29 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Database on Rohimoz28</title>
-    <link>http://localhost:1314/tags/database/</link>
+    <link>http://localhost:1313/tags/database/</link>
     <description>Recent content in Database on Rohimoz28</description>
-    <generator>Hugo -- 0.126.3</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Mar 2026 13:43:16 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1314/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Postgresql Async Replication Concept</title>
-      <link>http://localhost:1314/blog/postgresql-async-replication-concept/</link>
+      <link>http://localhost:1313/blog/postgresql-async-replication-concept/</link>
       <pubDate>Tue, 24 Mar 2026 13:43:16 +0700</pubDate>
-      <guid>http://localhost:1314/blog/postgresql-async-replication-concept/</guid>
-      <description>Replikasi database adalah salah satu pilar utama dalam membangun sistem yang memiliki ketersediaan tinggi (High Availability). Artikel ini akan membahas secara konseptual bagaimana Streaming Replication dengan mode Asynchronous bekerja, terutama dalam lingkungan yang menggunakan Docker.
-1. Arsitektur Replikasi Asynchronous Dalam model asynchronous, kita memprioritaskan performa tulis (write performance) pada server utama agar aplikasi tetap responsif.
-Primary (Master): Server utama untuk operasi tulis dan baca. Ketika terjadi transaksi, server akan langsung melakukan commit sukses tanpa menunggu konfirmasi dari server replika.</description>
+      <guid>http://localhost:1313/blog/postgresql-async-replication-concept/</guid>
+      <description>&lt;p&gt;Replikasi database adalah salah satu pilar utama dalam membangun sistem yang memiliki ketersediaan tinggi (&lt;em&gt;High Availability&lt;/em&gt;). Artikel ini akan membahas secara konseptual bagaimana &lt;strong&gt;Streaming Replication&lt;/strong&gt; dengan mode &lt;strong&gt;Asynchronous&lt;/strong&gt; bekerja, terutama dalam lingkungan yang menggunakan Docker.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-arsitektur-replikasi-asynchronous&#34;&gt;1. Arsitektur Replikasi Asynchronous&lt;/h2&gt;
+&lt;p&gt;Dalam model asynchronous, kita memprioritaskan performa tulis (&lt;em&gt;write performance&lt;/em&gt;) pada server utama agar aplikasi tetap responsif.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Primary (Master):&lt;/strong&gt; Server utama untuk operasi tulis dan baca. Ketika terjadi transaksi, server akan langsung melakukan &lt;em&gt;commit&lt;/em&gt; sukses tanpa menunggu konfirmasi dari server replika.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Standby (Replica):&lt;/strong&gt; Server cadangan yang bertindak sebagai &lt;em&gt;read-only&lt;/em&gt;. Server ini terus-menerus menarik (&lt;em&gt;pull&lt;/em&gt;) data perubahan dari Primary, namun dengan potensi jeda waktu (&lt;em&gt;lag&lt;/em&gt;) yang sangat kecil.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;./images/postgresql-async-replication-workflow.png&#34; alt=&#34;Alur Replikasi Asynchronous&#34;  /&gt;
+&lt;/p&gt;</description>
     </item>
     <item>
       <title>Strategi Backup Restore Postgresql Docker</title>
-      <link>http://localhost:1314/blog/strategi-backup-restore-postgresql-docker/</link>
+      <link>http://localhost:1313/blog/strategi-backup-restore-postgresql-docker/</link>
       <pubDate>Tue, 24 Mar 2026 13:30:51 +0700</pubDate>
-      <guid>http://localhost:1314/blog/strategi-backup-restore-postgresql-docker/</guid>
-      <description>Pernahkah Anda membayangkan terbangun di pagi hari dan mendapati database utama Anda corrupt atau data penting sebulan lalu terhapus tanpa sengaja? Di sinilah peran Daily Backup menjadi penyelamat nyawa.
-Artikel ini akan membahas cara melakukan backup database PostgreSQL yang berjalan di dalam Docker Container secara manual, namun dengan pendekatan yang terstruktur untuk kebutuhan jangka panjang.
-Mengapa Kita Butuh Backup Manual? Meskipun sistem otomatis mungkin sudah berjalan, terkadang kita butuh melakukan backup manual untuk:</description>
+      <guid>http://localhost:1313/blog/strategi-backup-restore-postgresql-docker/</guid>
+      <description>&lt;p&gt;Pernahkah Anda membayangkan terbangun di pagi hari dan mendapati database utama Anda &lt;em&gt;corrupt&lt;/em&gt; atau data penting sebulan lalu terhapus tanpa sengaja? Di sinilah peran &lt;strong&gt;Daily Backup&lt;/strong&gt; menjadi penyelamat nyawa.&lt;/p&gt;
+&lt;p&gt;Artikel ini akan membahas cara melakukan backup database PostgreSQL yang berjalan di dalam &lt;strong&gt;Docker Container&lt;/strong&gt; secara manual, namun dengan pendekatan yang terstruktur untuk kebutuhan jangka panjang.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mengapa-kita-butuh-backup-manual&#34;&gt;Mengapa Kita Butuh Backup Manual?&lt;/h2&gt;
+&lt;p&gt;Meskipun sistem otomatis mungkin sudah berjalan, terkadang kita butuh melakukan backup manual untuk:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
