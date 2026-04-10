@@ -1,12 +1,11 @@
 +++
-title = 'Technical Blog Backup Orchestrator'
+title = 'Membangun Backup Orchestrator Multi-Node dengan GitLab CI'
 date = '2026-04-08T16:04:14+07:00'
 draft = false
-description = ''
+description = 'Pendekatan Hybrid SSH dan Shell Executor'
 categories= ['Dev Ops']
 tags = ['gitlab', 'cicd', 'devops']
 +++
-# Membangun Backup Orchestrator Multi-Node dengan GitLab CI: Pendekatan Hybrid SSH dan Shell Executor
 
 ## TL;DR
 GitLab CI jadi control plane tunggal untuk backup multi-node dengan workflow terstandar, observable, dan aman.
@@ -21,7 +20,7 @@ Saat jumlah server bertambah, backup sering berubah jadi proses manual yang rapu
 Pada architecture ini, ada 3 node target:
 - **Node A**: dengan eksekusi via SSH dari pipeline.
 - **Node B**: dengan shell executor lokal host.
-- **Node C**: dengan shell executor lokal host.
+- **Node C**: dengan eksekusi SSH dari runner Docker ke host yang sama (runner dan host berada dalam 1 server).
 
 ## Kenapa Pendekatan Hybrid Relevan
 Pendekatan hybrid dipilih karena realitas infrastruktur tidak selalu homogen. Sebagian host paling aman diakses remote (SSH), sebagian lain lebih efisien dieksekusi langsung dari runner lokal. GitLab CI diposisikan sebagai **single orchestrator** agar kontrol, audit trail, dan observability tetap satu pintu.
@@ -38,8 +37,8 @@ Komponen utama architecture:
 
 ### Pola Eksekusi per Node
 - **Node A**: pipeline mengirim script via `ssh ... "bash -s"` lalu menjalankan backup di host target.
-- **Node B**: job langsung `bash scripts/133/...` karena runner berada di host target.
-- **Node C**: job langsung `bash scripts/132/...`, dengan fokus backup PostgreSQL host-level dan kompresi paralel.
+- **Node B**: job langsung jalankan shell script karena runner berada di host target.
+- **Node C**: job dijalankan dari runner yang di-install menggunakan Docker, lalu konek via SSH ke host yang sama untuk backup PostgreSQL host-level dan kompresi paralel.
 
 ### Standardisasi yang Diterapkan
 - Validasi variabel wajib sebelum backup dimulai.
@@ -53,7 +52,8 @@ Komponen utama architecture:
 2. Rules menentukan job mana yang aktif berdasarkan flag environment (`BACKUP_* == true`).
 3. Job menjalankan script backup sesuai node:
     - Node A melalui SSH.
-    - Node B/C secara lokal via shell executor.
+    - Node B secara lokal via shell executor.
+    - Node C melalui SSH dari runner Docker ke host yang sama.
 4. Script melakukan validasi pre-check:
     - env var wajib,
     - container/path/database check,
