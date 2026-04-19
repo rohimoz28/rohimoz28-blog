@@ -1,13 +1,16 @@
 ---
-title: "Tentang Blog & Saya"
+title: "Latar Belakang Kepenulisan"
 Description: ""
 layout: "home"
 ShowToc: false
 ---
 
-## Tentang Blog 
-Tujuan dibuatnya blog ini dibuat sebagai sarana dokumentasi pembelajaran saya sebagai Web Developer dan DevOps Engineer.
-Sebagian besar artikel mengenai pemecahan solusi, implementasi dan best practice dalam dunia IT.
+Halo, saya Rohim, Software Engineer dengan fokus pada Odoo dan DevOps.
 
-## Tentang Saya
-Saat ini saya bekerja sebagai DevOps Engineer. Berangkat dari seorang Web Developer yang bertransisi menjadi Odoo Developer (Technical).
+Blog ini saya buat untuk berbagi insight teknis yang relevan, ringkas, dan bisa langsung dipahami oleh sesama developer.
+
+Motivasi saya menulis ada beberapa hal. Pertama, saya ingin mendokumentasikan apa yang pernah saya buat dan masalah yang pernah saya hadapi, supaya saya punya history yang jelas tentang sejauh mana perkembangan saya. Kedua, menulis adalah hobi saya, jadi blog ini juga menjadi ruang pelarian yang sehat saat burnout.
+
+Melalui blog ini, saya berharap tulisan saya bisa membantu pembaca belajar lebih cepat, menghindari kesalahan yang sama, dan menemukan sudut pandang baru saat menyelesaikan masalah teknis.
+
+Jika kamu tertarik dengan topik Odoo dan DevOps, selamat datang dan selamat membaca.

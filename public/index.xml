@@ -231,15 +231,13 @@ kita ingin menyesuaikan hak akses tersebut dengan kebutuhan di modul kustomisasi
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Untuk meng-override nya, silahkan buka file &lt;code&gt;ir.model.access.csv&lt;/code&gt; di modul kustomisasi kalian dan ubah menjadi kira-kira seperti ini,&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Tentang Blog &amp; Saya</title>
+      <title>Latar Belakang Kepenulisan</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;tentang-blog&#34;&gt;Tentang Blog&lt;/h2&gt;
-&lt;p&gt;Tujuan dibuatnya blog ini dibuat sebagai sarana dokumentasi pembelajaran saya sebagai Web Developer dan DevOps Engineer.
-Sebagian besar artikel mengenai pemecahan solusi, implementasi dan best practice dalam dunia IT.&lt;/p&gt;
-&lt;h2 id=&#34;tentang-saya&#34;&gt;Tentang Saya&lt;/h2&gt;
-&lt;p&gt;Saat ini saya bekerja sebagai DevOps Engineer. Berangkat dari seorang Web Developer yang bertransisi menjadi Odoo Developer (Technical).&lt;/p&gt;</description>
+      <description>&lt;p&gt;Halo, saya Rohim, Software Engineer dengan fokus pada Odoo dan DevOps.&lt;/p&gt;
+&lt;p&gt;Blog ini saya buat untuk berbagi insight teknis yang relevan, ringkas, dan bisa langsung dipahami oleh sesama developer.&lt;/p&gt;
+&lt;p&gt;Motivasi saya menulis ada beberapa hal. Pertama, saya ingin mendokumentasikan apa yang pernah saya buat dan masalah yang pernah saya hadapi, supaya saya punya history yang jelas tentang sejauh mana perkembangan saya. Kedua, menulis adalah hobi saya, jadi blog ini juga menjadi ruang pelarian yang sehat saat burnout.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
